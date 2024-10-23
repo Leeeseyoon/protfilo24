@@ -1,3 +1,4 @@
+/* 나눔바른고딕 */
 @import url(http://www.openhiun.com/hangul/nanumbarungothic.css);
 @font-face {
     font-family: 'NanumBarunGothic';
@@ -26,7 +27,97 @@
    .nanumbarungothic * {
     font-family: 'NanumBarunGothic', sans-serif;
    }
+
+   
+   @font-face {
+    font-family: 'SF_HambakSnow';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 영문 폰트 */
+   @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Fugaz+One&display=swap');
+   /* 영문 셰리프 */
+   @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+
+   /* 딜라고딕 */
+   .dela-gothic-one-regular {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  /* 푸가지? */
+  .fugaz-one-regular {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* inria */
+  .inria-serif-light {
+    font-family: "Inria Serif", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .inria-serif-regular {
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .inria-serif-bold {
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+
+  }
+  
+  .inria-serif-light-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .inria-serif-regular-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .inria-serif-bold-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  
+
+
+
+/* 폰트 전체적용 */
 body {
     font-family: 'Nanum Barun Gothic', sans-serif;
-    font-weight: 500;
-  }
+    font-weight: 400;
+    color: #333;
+}
+#wrap .titlename{
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90px;
+}
+#wrap p{
+    font-size: 24px;
+}
+
+#header{
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+/* 메인 */
+#main span{font-weight: bold;}
