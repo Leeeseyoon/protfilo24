@@ -38,8 +38,99 @@ a {
                 font-style: italic;
                 font-weight: lighter;
                 color:#8A0000 ; z-index: 1;
-                line-height: 0.7;}
-#main .imgbox img{background-color: gray;}
-#main .txt_box h1{border: 1px solid blue;}
+                line-height: 0.9;
+                }
 
-.subtitle{font-family: 'SF_HambakSnow'; font-style: italic;}
+
+
+#main .imgbox img:nth-child(1){
+
+    position: absolute;
+    top: 58%;
+    margin-left: 1.5%;
+}
+#main .imgbox img:nth-child(2){
+
+    margin-top: 10%;
+    margin-left: 50%;
+}
+
+/* #main .txt_box h1{border: 1px solid blue;} */
+
+.subtitle{font-family: 'SF_HambakSnow';}
+
+
+
+
+
+/* about */
+
+#about .txt_box{
+    margin-top: 5%;
+    float: left;
+}
+
+
+    /* 무한스크롤 애니메이션 */
+    .keyword-container {
+        width: 29%; /* 전체 컨테이너 너비 조정 */
+        overflow: hidden;
+        margin: 20px 0;
+    }
+
+    .keyword-track-left, .keyword-track-right {
+        display: flex;
+        gap: 10px;
+        padding: 5px 0;
+    }
+
+    .keybox {
+        background-color: #fff;
+        padding: 8px 20px;
+        border-radius: 25px; /* 라운드 스타일 */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 약간의 그림자 효과 */
+        white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    }
+
+    .keybox p {
+        margin: 0;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .keyword-track-left {
+        animation: scrollLeft 15s linear infinite;
+    }
+
+    .keyword-track-right {
+        animation: scrollRight 15s linear infinite;
+        margin-top: 1px; /* 트랙 간격 조정 */
+    }
+
+
+    @keyframes scrollLeft {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
+
+    @keyframes scrollRight {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(0); }
+    }
+
+    /* 호버 효과 */
+    .keybox:hover {
+        background-color: #f0f0f0;
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+    }
+
+    /* 호버 시 애니메이션 정지를 위한 JavaScript도 수정이 필요합니다 */
+
+
+#about .about_box {
+    position: absolute;
+    right: 0;
+    margin-right: 20%;
+    margin-top: 2.5%;
+}
