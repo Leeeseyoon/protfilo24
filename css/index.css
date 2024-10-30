@@ -134,3 +134,7 @@ a {
     margin-right: 20%;
     margin-top: 2.5%;
 }
+
+#about .about_box p{
+    font-size: 20px;
+}
