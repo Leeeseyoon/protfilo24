@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/font.css">
 
+    <link rel="stylesheet" href="./css/design.css">
+    <link rel="stylesheet" href="./css/works.css">
+    <link rel="stylesheet" href="./css/contact.css">
+
 
     
 </head>
@@ -272,14 +276,142 @@
 
                 <div class="con_box">
                     <div class="butbox">
-                        <button>UX/UI</button>
-                        <button>Graphic</button>
-                        <button>Edit</button>
-                        <button>Other</button>
+                        <button class="tab-button active" data-tab="uxui">UX/UI</button>
+                        <button class="tab-button" data-tab="graphic">Graphic</button>
+                        <button class="tab-button" data-tab="edit">Edit</button>
+                        <button class="tab-button" data-tab="other">Other</button>
                     </div>
-                    <div class="box1">
+                    
+                    <!-- UX/UI 탭 -->
+                    <div id="uxui" class="tab-works active">
                         <h3>UX/UI</h3>
-                        <div class="boxsize"><!-- 박스 개체 수 맞춰서 넣기 --></div>
+                        <div class="boxsize">
+                            <div class="work-item">
+                                <img src="images/uxui-work1.jpg" alt="아뮤즈 웹사이트">
+                                <div class="work-info">
+                                    <h4>아뮤즈 웹사이트</h4>
+                                    <p>비건 레스토랑 브랜드 웹사이트 리뉴얼</p>
+                                    <span class="date">2024.01</span>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="images/uxui-work2.jpg" alt="카카오뱅크 앱">
+                                <div class="work-info">
+                                    <h4>카카오뱅크 앱</h4>
+                                    <p>모바일 뱅킹 앱 UI/UX 디자인</p>
+                                    <span class="date">2023.12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Graphic 탭 -->
+                    <div id="graphic" class="tab-works">
+                        <h3>Graphic</h3>
+                        <div class="boxsize">
+                            <div class="work-item size-small">
+                                <img src="images/브랜드포스터.png" alt="브랜드 포스터">
+                                <div class="work-info">
+                                    <h4>브랜드 포스터</h4>
+                                    <p>신제품 출시 홍보 포스터 디자인</p>
+                                    <span class="date">2024.02</span>
+                                </div>
+                            </div>
+                            <div class="work-item size-small">
+                                <img src="images/graphic-work2.jpg" alt="SNS 배너">
+                                <div class="work-info">
+                                    <h4>SNS 배너 디자인</h4>
+                                    <p>인스타그램 마케팅용 배너 시리즈</p>
+                                    <span class="date">2024.01</span>
+                                </div>
+                            </div>
+                            <div class="work-item size-large">
+                                <img src="images/graphic-work3.jpg" alt="패키지 디자인">
+                                <div class="work-info">
+                                    <h4>패키지 디자인</h4>
+                                    <p>화장품 브랜드 패키지 디자인</p>
+                                    <span class="date">2023.12</span>
+                                </div>
+                            </div>
+                            <div class="work-item size-small">
+                                <img src="images/graphic-work4.jpg" alt="브로슈어 디자인">
+                                <div class="work-info">
+                                    <h4>브로슈어 디자인</h4>
+                                    <p>기업 홍보 브로슈어 제작</p>
+                                    <span class="date">2023.11</span>
+                                </div>
+                            </div>
+                            <div class="work-item size-small">
+                                <img src="images/graphic-work5.jpg" alt="이벤트 배너">
+                                <div class="work-info">
+                                    <h4>이벤트 배너</h4>
+                                    <p>시즌별 프로모션 배너 디자인</p>
+                                    <span class="date">2023.10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Edit 탭 -->
+                    <div id="edit" class="tab-works">
+                        <h3>Edit</h3>
+                        <div class="boxsize">
+                            <div class="work-item">
+                                <img src="images/edit-work1.jpg" alt="영상 편집">
+                                <div class="work-info">
+                                    <h4>브랜드 홍보 영상</h4>
+                                    <p>30초 브랜드 홍보 모션그래픽</p>
+                                    <span class="date">2024.02</span>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="images/edit-work2.jpg" alt="제품 영상">
+                                <div class="work-info">
+                                    <h4>제품 소개 영상</h4>
+                                    <p>신제품 런칭 홍보 영상</p>
+                                    <span class="date">2024.01</span>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="images/edit-work3.jpg" alt="SNS 영상">
+                                <div class="work-info">
+                                    <h4>SNS 숏폼</h4>
+                                    <p>인스타그램 릴스 시리즈</p>
+                                    <span class="date">2023.12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Other 탭 -->
+                    <div id="other" class="tab-works">
+                        <h3>Other</h3>
+                        <div class="boxsize">
+                            <div class="work-item">
+                                <img src="images/other-work1.jpg" alt="일러스트레이션">
+                                <div class="work-info">
+                                    <h4>캐릭터 일러스트</h4>
+                                    <p>브랜드 캐릭터 디자인</p>
+                                    <span class="date">2024.01</span>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="images/other-work2.jpg" alt="3D 모델링">
+                                <div class="work-info">
+                                    <h4>3D 제품 렌더링</h4>
+                                    <p>제품 프로모션용 3D 작업</p>
+                                    <span class="date">2023.12</span>
+                                </div>
+                            </div>
+                            <div class="work-item">
+                                <img src="images/other-work3.jpg" alt="브랜딩">
+                                <div class="work-info">
+                                    <h4>브랜드 아이덴티티</h4>
+                                    <p>스타트업 브랜딩 작업</p>
+                                    <span class="date">2023.11</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -295,8 +427,7 @@
                             <input type="email" name="email" placeholder="Wirte yout E-mail" required>
                         </div>
                         <div class="requestbox">
-                            <textarea name="message" placeholder="
-                            Please write your request" required></textarea>
+                            <textarea name="message" placeholder="Please write your request" required></textarea>
                         </div>
                         <button type="submit">Send</button>
                     </form>
@@ -478,6 +609,27 @@
         
         requestAnimationFrame(animate);
     }
+    </script>
+
+    <!-- 탭 버튼 스크립트 -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-works');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 모든 버튼과 콘텐츠의 active 클래스 제거
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // 클릭된 버튼과 해당 콘텐츠에 active 클래스 추가
+                button.classList.add('active');
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    });
     </script>
 
 </body>

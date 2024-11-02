@@ -1,0 +1,100 @@
+/* 컨택 */
+#contact{
+    width: 100%;
+    height: 100vh;
+    background-color: #FF3434;
+}
+#contact .titlename{
+    margin-left: 20%;
+    padding-top: 40px;
+}
+#contact .formbox{
+    width: 60%;
+    max-width: 600px;
+    margin: 30px 0 0 20%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contactbox {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.namebox input,
+.emailbox input {
+    width: 40%;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 2px solid #c0c0c0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: #e6e6e6;
+}
+
+.requestbox textarea {
+    width: 90%;
+    height: 200px;
+    padding: 20px;
+    font-size: 16px;
+    border: 2px solid  #c0c0c0;
+    border-radius: 12px;
+    resize: vertical;
+    min-height: 150px;
+    transition: all 0.3s ease;
+    background-color: #e6e6e6;
+    font-family: inherit;
+}
+
+.namebox input:focus,
+.emailbox input:focus,
+.requestbox textarea:focus {
+    border-color: #FF3434;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(250, 164, 188, 0.2);
+}
+
+.contactbox button {
+    width: 200px;
+    padding: 15px 30px;
+    margin: 20px auto;
+    background: #FF3434;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contactbox button:hover {
+    background: #FF3434;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(250, 164, 188, 0.4);
+}
+
+.SNSbox {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.SNSbox div {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #eee;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: violet;
+}
+
+.SNSbox div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
