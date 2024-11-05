@@ -18,6 +18,7 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: flex-start;
+    margin-top: 1%;
 }
 
 #uxui .work-item{
@@ -40,7 +41,7 @@
 
 }
 #graphic .work-item.size-small{
-    width: 380px;
+    width: 360px;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -59,6 +60,7 @@
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    
 }
 
 .work-item:hover {
@@ -100,7 +102,7 @@
 }
 #graphic .work-item
 {
-    flex: 0 0 calc(22% - 10px); /* 3개씩 한 줄에 표시하도록 60%로 변경 */
+    flex: 0 0 calc(25% - 10px); /* 3개씩 한 줄에 표시하도록 60%로 변경 */
     margin-bottom: 20px;
 }
 
@@ -111,7 +113,7 @@
 /* 기본적으로 모든 탭 콘텐츠를 숨김 */
 .tab-works {
     display: none;
-    margin-top: 3%;
+    margin-top: 1%;
 }
 .tab-works h3{
     font-size: 40px;
@@ -125,7 +127,6 @@
 .butbox {
     display: flex;
     gap: 11px;
-    margin-bottom: 30px;
     margin-top: 1%;
 }
 
