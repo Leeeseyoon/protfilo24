@@ -3,7 +3,11 @@
     --violet: rgb(103, 58, 183);
     --pink: rgb(244, 143, 177);
   }
-  
+
+  #typing-text {
+    height: 280px; /* 원하는 높이로 설정 */
+    overflow: hidden; /* 내용이 넘칠 경우 숨김 처리 */
+}
   @keyframes background-pan {
     from {
       background-position: 0% center;
@@ -65,7 +69,7 @@
     fill: var(--violet);
 }
 
-#about .txt_box h1 > .magic > .magic-text {
+.magic-text {
     animation: background-pan 3s linear infinite;
     background: linear-gradient(
         to right,
