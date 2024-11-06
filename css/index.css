@@ -55,13 +55,14 @@ a {
      -ms-user-select: none;
      -webkit-user-select: none;
     margin-top: 13%;  }
-#main .imgbox h1{position: absolute; bottom: 0; right: 0;
-                font-size: 350px;
-                font-family: 'SF_HambakSnow';
-                font-style: italic;
-                font-weight: lighter;
-                color:#8a00006f ; z-index: 1;
-                line-height: 0.9;
+#main .imgbox h1{
+    position: absolute; bottom: 0; right: 0;
+        font-size: 350px;
+        font-family: 'SF_HambakSnow';
+        font-style: italic;
+        font-weight: lighter;
+        color:#8a00006f ; z-index: 1;
+        line-height: 0.9;
                 }
 
 
@@ -77,9 +78,11 @@ a {
     margin-left: 50%;
 }
 #main .subtitle2{
-    font-family: 'NanumBarunGothic';
-    color: #fff;
-    font-size: 24px;
+    position: absolute;
+    font-size: 30px; 
+    font-family: 'Pretendard-Regular';
+    color: #670003;
+
 }   
 /* #main .txt_box h1{border: 1px solid blue;} */
 
@@ -98,6 +101,7 @@ a {
     background: linear-gradient(to top, #240001, #b30600);
     color: transparent;
     -webkit-background-clip: text;
+    margin-top: 3%;
 }
 
 
@@ -129,7 +133,7 @@ a {
     transform: scale(0.8);
 }
 #about .titlename{
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
     /* 무한스크롤 애니메이션 */
@@ -141,7 +145,7 @@ a {
      -webkit-user-select: none;
         width: 37%; /* 전체 컨테이너 너비 조정 */
         overflow: hidden;
-        margin: 20px 0;
+        /* margin: 20px 0; */
     }
 
     .keyword-track-left, .keyword-track-right {
@@ -151,16 +155,18 @@ a {
     }
 
     .keybox {
-        background-color: #fff;
-        padding: 8px 20px;
-        border-radius: 25px; /* 라운드 스타일 */
+        
         box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 약간의 그림자 효과 */
         white-space: nowrap; /* 텍스트 줄바꿈 방지 */
     }
 
     .keybox p {
+        background-color: #fff;
+        padding: 8px 20px;
+        border-radius: 25px; /* 라운드 스타일 */
+        font-family: 'LINESeedKR-Bd';
         margin: 0;
-        font-size: 14px;
+        font-size: 24px;
         color: #333;
     }
 
@@ -186,8 +192,17 @@ a {
 
     /* 호버 효과 */
     .keybox:hover {
-        background-color: #f0f0f0;
+        
+        color: white;
         transform: scale(1.05);
+        transition: all 0.2s ease;
+    }
+
+    .keybox p:hover {
+        font-weight: bolder;
+        background-color: #333;
+        color: white;
+        transform: scale(1.04);
         transition: all 0.2s ease;
     }
 

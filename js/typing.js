@@ -9,7 +9,7 @@ const textArray = [
     "최신 트렌드와 고객들의 니즈를 파악하여",
     "사용자들에게 새롭고 참신한 디자인을",
     "제공하는",
-    "디자이너 세윤",
+    " 디자이너 세윤",
     "입니다." 
 ];
 
@@ -30,11 +30,16 @@ function type() {
                 if (currentText.includes("감칠맛") || currentText.includes("톡톡") || currentText.includes("디자이너 세윤")) {
                     const span = document.createElement('span');
                     span.className = 'magic-text'; // magic-text 클래스 추가
+                    
                     span.innerHTML = char;
                     document.getElementById('typing-text').appendChild(span);
                 } else {
-                    // magic-text 클래스가 필요 없는 경우, 일반 텍스트로 추가
-                    document.getElementById('typing-text').innerHTML += char; // span 없이 추가
+                    // 나머지 텍스트에는 .nomal-text 클래스 적용
+                    const span = document.createElement('span');
+                    span.className = 'nomal-text'; // nomal-text 클래스 추가
+                    span.style.fontWeight = '300'; // 폰트 굵기 낮추기
+                    span.innerHTML = char;
+                    document.getElementById('typing-text').appendChild(span);
                 }
                 
                 charIndex++;
@@ -52,5 +57,11 @@ function type() {
     }
 }
 
+
 // 페이지 로드 시 타이핑 시작
-document.addEventListener('DOMContentLoaded', type);
+document.addEventListener('DOMContentLoaded', () => {
+    const aboutPage = document.getElementById('about'); // about 페이지 요소 확인
+    if (aboutPage) { // about 페이지가 존재할 때
+        type(); // 타이핑 시작
+    }
+});

@@ -38,7 +38,7 @@
         <div id="content">
             <div id="main">
                 <div class="txt_box">
-                    <p class="subtitle2"><span>감칠맛</span>나고 톡톡 튀는 개성있는 디자이너</p>
+                    <p class="subtitle2"><span>감칠맛</span> 나고 <span>톡톡</span> 튀는 개성있는 디자이너</p>
                     <h1 class="titlename">#SEYOON</h1>
                     <p class="subtitle">Web Design Protflio <br>
                         2022-2024</p>
@@ -55,7 +55,7 @@
             </div>
 
 
-            <div id="about">
+            <div id="about" class="about">
                 <h1 class="titlename">#SEYOON</h1>
 
                 <div class="txt_box">
@@ -211,14 +211,17 @@
             <div id="design">
                 <div class="d_con">
                     <h1 class="titlename">#DESIGN</h1>
+
                     <div class="slider-container">
                         <div class="slider-wrapper">
                             <!-- 첫 번째 슬라이드 -->
                             <div class="slide active">
                                 <div class="back">
+
                                     <div class="mockup">
-                                        <img src="images/amuse.png" width="833px" height="582px" alt="">
+                                        <button id="modalOpenButton"><img src="images/amuse.png" width="833px" height="582px" alt=""></button>
                                     </div>
+                                    
                                     <div class="d_txtbox">
                                         <div class="title">
                                             <h2>AMUSE</h2>
@@ -249,15 +252,21 @@
                                             <button>Website</button>
                                         </div>
                                     </div>
+
+                                    
                                 </div>
+                                
                             </div>
+                            
                             
                             <!-- 두 번째 슬라이드 -->
                             <div class="slide yellow-bg">
                                 <div class="back">
+
                                     <div class="mockup">
-                                        <img src="images/amuse.png" width="833px" height="582px" alt="">
+                                        <button id="modalOpenButton"><img src="images/amuse.png" width="833px" height="582px" alt=""></button>
                                     </div>
+
                                     <div class="d_txtbox">
                                         <div class="title">
                                             <h2>KAKAO BANK</h2>
@@ -289,6 +298,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
 
                             <!-- 세 번째 슬라이드 -->
@@ -331,11 +341,41 @@
                             </div>
                         </div>
                         
-                        <button class="slide-button prev confetti-button">&lt;</button>
-                        <button class="slide-button next confetti-button">&gt;</button>
+                        <button class="slide-button prev confetti-button"><img src="images/left.svg" alt=""></button>
+                        <button class="slide-button next confetti-button"><img src="images/right.svg" alt=""></button>
+                    
+                    
+                    
+                        <div id="modalContainer" class="hidden">
+                            <div id="modalContent">
+                                <h2>AMUSE Web site Resign</h2>
+                                <p>AMUSE index.1</p>
+                                <button id="modalCloseButton">
+                                    <p>닫기</p>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div id="modalContainer" class="hidden">
+                            <div id="modalContent">
+                                <h2>KAKAO BNAK Web site Resign</h2>
+                                <p>KAKAO BNAKindex.1</p>
+                                <button id="modalCloseButton">
+                                    <p>닫기</p>
+                                </button>
+                            </div>
+                        </div>
+
+
+
+
+
+                    
                     </div>
                 </div>
             </div>
+
 
             <div id="works">
                 <h1 class="titlename">#WORKS</h1>
@@ -531,7 +571,7 @@
 
         <!-- 스크립트 시작  -->
     
-    <!-- Top -->
+    <!-- Top버튼 -->
     <script>
         const $topBtn = document.querySelector(".moveTopBtn");
         $topBtn.onclick = () => {
@@ -706,9 +746,10 @@
     </script>
 
 <!-- 텍스트 타이핑 효과 -->
-    <script src="./js/typing.js">
+    <script src="./js/typing.js"></script>
 
-    </script>
+    <!-- 모달창 -->
+    <script src="./js/modal.js"></script>
 
 </body>
 </html>
