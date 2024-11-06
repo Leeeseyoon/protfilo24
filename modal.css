@@ -1,0 +1,97 @@
+/* 기본 스타일 설정 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 슬라이더 컨테이너 */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 833px; /* 슬라이더의 최대 너비 */
+    margin: auto;
+}
+
+/* 슬라이더 래퍼 */
+.slider-wrapper {
+    display: flex;
+    overflow: hidden; /* 슬라이더가 넘치는 부분 숨기기 */
+}
+
+/* 슬라이드 */
+.slide {
+    min-width: 100%; /* 각 슬라이드가 100% 너비를 가지도록 설정 */
+    transition: transform 0.5s ease; /* 슬라이드 전환 효과 */
+}
+
+/* 모달 스타일 */
+.hidden {
+    display: none; /* 모달을 숨기는 클래스 */
+}
+
+#modalContainer1, #modalContainer2 {
+    position: fixed; /* 모달을 화면에 고정 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 반투명 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 모달이 다른 요소 위에 표시되도록 설정 */
+}
+
+/* 모달 내용 스타일 */
+#modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px; /* 모달의 모서리를 둥글게 */
+    max-width: 600px; /* 모달의 최대 너비 */
+    width: 90%; /* 모달의 기본 너비 */
+}
+
+/* 모달 슬라이더 랩 */
+.modal-slider-wrap {
+    display: flex;
+    align-items: center;
+    margin: 20px 0; /* 슬라이더와 모달 내용 간의 간격 */
+}
+
+/* 이미지 슬라이더 */
+.image-slider {
+    display: flex;
+    overflow: hidden; /* 이미지가 넘치는 부분 숨기기 */
+    width: 100%; /* 전체 너비를 사용 */
+}
+
+.image-slider img {
+    min-width: 100%; /* 각 이미지는 슬라이더의 너비에 맞춤 */
+    transition: transform 0.5s ease; /* 이미지 슬라이드 전환 효과 */
+}
+
+/* 모달 버튼 스타일 */
+.modal-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px; /* 버튼 글자 크기 */
+    cursor: pointer;
+    z-index: 10; /* 버튼이 다른 요소 위에 표시되도록 설정 */
+    margin: 0 10px; /* 버튼 간의 간격 */
+}
+
+/* 닫기 버튼 스타일 */
+button#modalCloseButton1, button#modalCloseButton2 {
+    margin-top: 20px; /* 닫기 버튼과 모달 내용 간의 간격 */
+    padding: 10px 20px; /* 버튼 패딩 */
+    border: none;
+    background-color: #007BFF; /* 버튼 배경색 */
+    color: white; /* 버튼 텍스트 색상 */
+    border-radius: 5px; /* 버튼 모서리 둥글게 */
+    cursor: pointer;
+}
+
+button#modalCloseButton1:hover, button#modalCloseButton2:hover {
+    background-color: #0056b3; /* 마우스 오버 시 버튼 색상 변화 */
+}

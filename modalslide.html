@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider-wrapper">
+            <div class="slide active">
+                <button id="modalOpenButton1"><img src="images/amuse.png" width="833px" height="582px" alt=""></button>
+            </div>
+            <div class="slide active">
+                <button id="modalOpenButton2"><img src="images/amuse.png" width="833px" height="582px" alt=""></button>
+            </div>
+            <div class="slide active">
+                <button id="modalOpenButton3"><img src="images/amuse.png" width="833px" height="582px" alt=""></button>
+            </div>
+        </div>
+    
+        <div id="modalContainer1" class="hidden">
+            <div id="modalContent">
+                <h2>AMUSE Web site Resign</h2>
+                <p>AMUSE index.1</p>
+                <div class="modal-slider-wrap">
+                    <button class="modal-button" id="modalPrevButton1">◀</button>
+                    <div class="image-slider">
+                        <img src="images/image1.jpg" alt="Image 1">
+                        <img src="images/image2.jpg" alt="Image 2">
+                        <img src="images/image3.jpg" alt="Image 3">
+                        <img src="images/image4.jpg" alt="Image 4">
+                    </div>
+                    <button class="modal-button" id="modalNextButton1">▶</button>
+                </div>
+                <button id="modalCloseButton1"><p>닫기</p></button>
+            </div>
+        </div>
+    
+        <div id="modalContainer2" class="hidden">
+            <div id="modalContent">
+                <h2>KAKAKOBANK site Resign</h2>
+                <p>AMUSE index.1</p>
+                <div class="modal-slider-wrap">
+                    <button class="modal-button" id="modalPrevButton2">◀</button>
+                    <div class="image-slider">
+                        <img src="images/image1.jpg" alt="Image 5">
+                        <img src="images/image2.jpg" alt="Image 6">
+                        <img src="images/image3.jpg" alt="Image 7">
+                        <img src="images/image4.jpg" alt="Image 8">
+                    </div>
+                    <button class="modal-button" id="modalNextButton2">▶</button>
+                </div>
+                <button id="modalCloseButton2"><p>닫기</p></button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/modalslide2.js"></script>
+</body>
+</html>

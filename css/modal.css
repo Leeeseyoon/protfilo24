@@ -1,0 +1,137 @@
+/* 모달창 */
+
+#modalOpenButton1,
+#modalOpenButton2,
+#modalOpenButton3,
+#modalCloseButton1,
+#modalCloseButton2,
+#modalCloseButton3,
+#modalCloseButton4{
+    cursor: pointer;
+  }
+  
+#modalContainer1,
+#modalContainer2,
+#modalContainer3{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    
+  }
+  
+#modalContent {
+    position: absolute;
+    background-color: #ffffff;
+    width: 80%;
+    height: 60vh;
+    border-radius: 25px;
+    padding: 15px;
+    z-index: 2;
+}
+  
+
+#modalContainer1.hidden,
+#modalContainer2.hidden,
+#modalContainer3.hidden {
+    opacity: 0;
+    display: none;
+    z-index: 2;
+}
+
+
+#modalContainer1 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease-in-out;
+    
+
+  }
+   
+  .hidden {
+    display: none; /* 모달을 숨기는 클래스 */
+}
+
+  /* 모달창 css */
+  #modalContent {
+    position: absolute;
+    background-color: #ffffff;
+    width: 80%;
+    height: 75vh;
+    border-radius: 25px;
+    padding: 15px;
+    margin-top: 5%;
+    z-index: 2;
+    animation: fadeIn 400ms;
+
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+        } to {
+        opacity: 1;
+        transform: scale(1);
+        }
+    }
+    #modalContainer.hidden {
+        display: none;
+}
+
+
+
+
+
+
+
+/* 모달1 슬라이드 설정 */
+
+#modalContent .modal-slider-wrap {
+    
+    width: 100%; /* 슬라이더의 너비를 설정 */
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+#modalContent .image-slider {
+    border: 2px solid red;
+    display: flex;
+    overflow: hidden;
+    width: 600px; /* 슬라이더의 너비를 설정 */
+    height: 50vh;
+    background-color: aquamarine;
+}
+
+#modalContent .image-slider img {
+    border: 2px solid red;
+    min-width: 100%;
+    width: 200px;
+    height: 100px;
+    transition: transform 0.5s ease;
+}
+
+#modalContent .modal-button {
+    background-color: transparent;
+    border: 2px solid red;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10; /* 버튼이 다른 요소 위에 표시되도록 설정 */
+}
+

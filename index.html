@@ -14,6 +14,9 @@
 
     <link rel="stylesheet" href="./css/text.css">
     <link rel="stylesheet" href="./css/design.css">
+    <link rel="stylesheet" href="./css/modal.css">
+
+
     <link rel="stylesheet" href="./css/works.css">
     <link rel="stylesheet" href="./css/contact.css">
 
@@ -219,7 +222,7 @@
                                 <div class="back">
 
                                     <div class="mockup">
-                                        <button id="modalOpenButton"><img src="images/amuse.png" width="833px" height="582px" alt=""></button>
+                                        <button id="modalOpenButton1"><img src="images/amuse.png" width="833px" height="582px" alt=""></button>
                                     </div>
                                     
                                     <div class="d_txtbox">
@@ -264,7 +267,7 @@
                                 <div class="back">
 
                                     <div class="mockup">
-                                        <button id="modalOpenButton"><img src="images/amuse.png" width="833px" height="582px" alt=""></button>
+                                        <button id="modalOpenButton2"><img src="images/amuse.png" width="833px" height="582px" alt=""></button>
                                     </div>
 
                                     <div class="d_txtbox">
@@ -305,7 +308,7 @@
                             <div class="slide red-bg">
                                 <div class="back">
                                     <div class="mockup">
-                                        <img src="images/amuse.png" width="833px" height="582px" alt="">
+                                        <button id="modalOpenButton3"><img src="images/amuse.png" width="833px" height="582px" alt=""></button>
                                     </div>
                                     <div class="d_txtbox">
                                         <div class="title">
@@ -345,33 +348,53 @@
                         <button class="slide-button next confetti-button"><img src="images/right.svg" alt=""></button>
                     
                     
-                    
-                        <div id="modalContainer" class="hidden">
-                            <div id="modalContent">
-                                <h2>AMUSE Web site Resign</h2>
-                                <p>AMUSE index.1</p>
-                                <button id="modalCloseButton">
-                                    <p>닫기</p>
-                                </button>
+                    </div>
+
+                    <div id="modalContainer1" class="hidden">
+                        <div id="modalContent">
+                            <h2>AMUSE Web site Resign</h2>
+                            <p>AMUSE index.1</p>
+                            <button id="modalCloseButton1"><p>닫기</p></button>
+                            <div class="modal-slider-wrap">
+                                
+                                <button class="modal-button" id="modalPrevButton">◀</button>
+                                <div class="image-slider">
+                                    <img src="images/image1.jpg" alt="Image 1">
+                                    <img src="images/image2.jpg" alt="Image 2">
+                                    <img src="images/image3.jpg" alt="Image 3">
+                                    <img src="images/image4.jpg" alt="Image 4">
+                                </div>
+                                <button class="modal-button" id="modalNextButton">▶</button>
+                                
                             </div>
+                            
+                            
                         </div>
+                    </div>
+                        
 
 
-                        <div id="modalContainer" class="hidden">
-                            <div id="modalContent">
-                                <h2>KAKAO BNAK Web site Resign</h2>
-                                <p>KAKAO BNAKindex.1</p>
-                                <button id="modalCloseButton">
-                                    <p>닫기</p>
-                                </button>
-                            </div>
+
+
+                    <div id="modalContainer2" class="hidden">
+                        <div id="modalContent">
+                            <h2>KAKAO BNAK Web site Resign</h2>
+                            <p>KAKAO BNAKindex.1</p>
+                            <button id="modalCloseButton2">
+                                <p>닫기</p>
+                            </button>
                         </div>
+                    </div>
 
 
-
-
-
-                    
+                    <div id="modalContainer3" class="hidden">
+                        <div id="modalContent">
+                            <h2>KAKAO BNAK Web site Resign</h2>
+                            <p>KAKAO BNAKindex.1</p>
+                            <button id="modalCloseButton3">
+                                <p>닫기</p>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -669,7 +692,7 @@
             const x = e.clientX;
             const y = e.clientY;
             
-            // ���티클 개수
+            //파티클 개수
             for (let i = 0; i < 15; i++) {
                 createParticle(x, y);
             }
@@ -748,8 +771,51 @@
 <!-- 텍스트 타이핑 효과 -->
     <script src="./js/typing.js"></script>
 
+
+
+    <!--  -->
+    <script>
+        const button = document.getElementById('modalOpenButton1');
+
+        // 설정할 이동 범위 및 속도
+        const moveDistance = 10; // 위 아래로 이동할 거리 (픽셀)
+        const moveSpeed = 50; // 이동 속도 (ms)
+        let direction = 1; // 이동 방향: 1은 아래, -1은 위
+
+        const moveButton = () => {
+            // 현재 위치를 가져온 후 Y축으로 이동
+            const currentTransform = getComputedStyle(button).transform;
+            const translateY = currentTransform === 'none' ? 0 : parseFloat(currentTransform.split(',')[5]);
+            
+            // Y축 위치 업데이트
+            button.style.transform = `translateY(${translateY + (moveDistance * direction)}px) scale(1.02)`;
+            
+            // 방향 전환: 위로 이동 중이면 아래로, 아래로 이동 중이면 위로
+            if (translateY >= moveDistance || translateY <= -moveDistance) {
+                direction *= -1; // 방향 전환
+            }
+
+            // 다음 위치로 이동
+            setTimeout(moveButton, moveSpeed); // 속도에 따라 반복 호출
+        };
+
+        // 버튼 호버 이벤트
+        button.addEventListener('mouseover', () => {
+            button.style.transform = `scale(1.02)`; // 호버 시 크기 증가
+        });
+
+        // 애니메이션 시작
+        moveButton();
+
+
+
+
+    </script>
     <!-- 모달창 -->
+    
     <script src="./js/modal.js"></script>
+        <!-- 모달창안에 슬라이드창 -->
+        <script src="./js/modalslide.js"></script>  
 
 </body>
 </html>
