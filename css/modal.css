@@ -103,9 +103,6 @@
 /* 모달1 슬라이드 설정 */
 
 #modalContent .modal-slider-wrap {
-    
-    width: 100%; /* 슬라이더의 너비를 설정 */
-    height: 70vh;
     display: flex;
     align-items: center;
 }
@@ -113,18 +110,10 @@
 #modalContent .image-slider {
     border: 2px solid red;
     display: flex;
-    overflow: hidden;
-    width: 600px; /* 슬라이더의 너비를 설정 */
-    height: 50vh;
-    background-color: aquamarine;
-}
-
-#modalContent .image-slider img {
-    border: 2px solid red;
-    min-width: 100%;
-    width: 200px;
-    height: 100px;
-    transition: transform 0.5s ease;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    overflow: auto; /* 스크롤 가능 */
+    width: 300px; /* 슬라이더의 너비를 설정 */
+    height: 500px; /* 슬라이더의 높이를 설정 */
 }
 
 #modalContent .modal-button {

@@ -1,54 +1,67 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const modal1 = document.getElementById('#modalContainer1');
-    const modal2 = document.getElementById('#modalContainer2');
+    const modal1 = document.getElementById('modalContainer1');
+    const modal2 = document.getElementById('modalContainer2');
 
-    // modal1에서 슬라이드 관련 요소 선택
-    const modalSliderWrap1 = modal1.querySelector('#modalContainer1');
-    const imageSlider1 = modal1.querySelector('.image-slider'); // 이미지 슬라이더 선택
-    const prevButton1 = modal1.querySelector('#modalPrevButton1'); // ID로 선택
-    const nextButton1 = modal1.querySelector('#modalNextButton1'); // ID로 선택
+    if (!modal1 || !modal2) return;
 
-    // modal2에서 슬라이드 관련 요소 선택
-    const modalSliderWrap2 = modal2.querySelector('#modalContainer2');
-    const imageSlider2 = modal2.querySelector('.image-slider'); // 이미지 슬라이더 선택
-    const prevButton2 = modal2.querySelector('#modalPrevButton2'); // ID로 선택
-    const nextButton2 = modal2.querySelector('#modalNextButton2'); // ID로 선택
+    const imageSlider1 = modal1.querySelector('.image-slider');
+    const prevButton1 = modal1.querySelector('#modalPrevButton');
+    const nextButton1 = modal1.querySelector('#modalNextButton');
+
+    const imageSlider2 = modal2.querySelector('.image-slider');
+    const prevButton2 = modal2.querySelector('#modalPrevButton2');
+    const nextButton2 = modal2.querySelector('#modalNextButton2');
 
     let currentIndex1 = 0;
     let currentIndex2 = 0;
 
     const showImage = (slider, index) => {
-        const images = slider.querySelectorAll('img'); // 이미지 선택
+        if (!slider) return index;
+        
+        const images = slider.querySelectorAll('img');
+        if (!images.length) return index;
+        
         const totalImages = images.length;
-        index = (index + totalImages) % totalImages; // 인덱스를 순환 처리
-        const offset = -index * 100; // 슬라이드 이동
-        images.forEach((img) => {
-            img.style.transform = `translateX(${offset}%)`;
+        index = (index + totalImages) % totalImages;
+        
+        // 현재 이미지만 보이도록 설정
+        images.forEach((img, i) => {
+            img.style.display = (i === index) ? 'block' : 'none'; // 현재 이미지만 보이게 함
+            img.style.maxWidth = '100%'; // 이미지 크기를 슬라이더에 맞춤
         });
-        return index; // 현재 인덱스를 반환
+        
+        return index;
     };
 
     const moveToSlide1 = (index) => {
-        currentIndex1 = showImage(imageSlider1, index); // imageSlider1 사용
+        currentIndex1 = showImage(imageSlider1, index);
     };
 
     const moveToSlide2 = (index) => {
-        currentIndex2 = showImage(imageSlider2, index); // imageSlider2 사용
+        currentIndex2 = showImage(imageSlider2, index);
     };
 
-    prevButton1.addEventListener('click', () => {
-        moveToSlide1(currentIndex1 - 1);
-    });
+    if (prevButton1 && nextButton1) {
+        prevButton1.addEventListener('click', () => {
+            moveToSlide1(currentIndex1 - 1);
+        });
 
-    nextButton1.addEventListener('click', () => {
-        moveToSlide1(currentIndex1 + 1);
-    });
+        nextButton1.addEventListener('click', () => {
+            moveToSlide1(currentIndex1 + 1);
+        });
+    }
 
-    prevButton2.addEventListener('click', () => {
-        moveToSlide2(currentIndex2 - 1);
-    });
+    if (prevButton2 && nextButton2) {
+        prevButton2.addEventListener('click', () => {
+            moveToSlide2(currentIndex2 - 1);
+        });
 
-    nextButton2.addEventListener('click', () => {
-        moveToSlide2(currentIndex2 + 1);
-    });
+        nextButton2.addEventListener('click', () => {
+            moveToSlide2(currentIndex2 + 1);
+        });
+    }
+
+    // 초기 이미지 표시
+    moveToSlide1(0);
+    moveToSlide2(0);
 });
