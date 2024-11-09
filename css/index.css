@@ -65,6 +65,9 @@ a {
         line-height: 0.9;
                 }
 
+                .moving-text{
+                    position: absolute;
+                }
 
 
 #main .imgbox img:nth-child(1){
@@ -103,7 +106,6 @@ a {
     -webkit-background-clip: text;
     margin-top: 3%;
 }
-
 
 
 

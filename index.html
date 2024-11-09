@@ -40,6 +40,8 @@
         </div>
 
         <div id="content">
+
+
             <div id="main">
                 <div class="txt_box">
                     <p class="subtitle2"><span>감칠맛</span> 나고 <span>톡톡</span> 튀는 개성있는 디자이너</p>
@@ -53,10 +55,12 @@
                         <img src="images/Tomatopuree.png" ><!-- 토마토 퓨레 이미지 -->
                         
                     </div>
-                    <h1>Tomato <br> Puree</h1>
+                    <h1 id="moving-text" class="moving-text">Tomato <br> Puree</h1>
                     
                 </div>
             </div>
+
+            <script src="./js/textover.js"></script>
 
 
             <div id="about" class="about">
@@ -356,19 +360,31 @@
                     <!-- 모달창 슬라이드 -->
                     <div id="modalContainer1" class="hidden">
                         <div id="modalContent">
-                            <h2>AMUSE Web site Resign</h2>
-                            <p>AMUSE index.1</p>
-                            <button id="modalCloseButton1"><p>닫기</p></button>
+                            <h2><span>AMUSE</span> Web site Resign</h2>
+                            
+                            <button id="modalCloseButton1" class="modalCloseButton1"><p>X</p></button>
                             <div class="modal-slider-wrap">
                                 
-                                <button class="modal-button" id="modalPrevButton">◀</button>
+                                <button class="modal-button" id="modalPrevButton"><img src="images/left.svg" alt=""></button>
                                 <div class="image-slider">
-                                    <img src="images/amuse-1.svg" alt="Image 1">
-                                    <img src="images/amuse-2.svg" alt="Image 2">
-                                    <img src="images/amuse-3.svg" alt="Image 3">
-                                    <img src="images/amuse-4.svg" alt="Image 4">
+                                    <div class="img">
+                                        <p>AMUSE index.1</p>
+                                        <img src="images/amuse-1.svg" alt="Image 1">
+                                    </div>
+                                    <div class="img">
+                                        <p>AMUSE index.2</p>
+                                        <img src="images/amuse-2.svg" alt="Image 1">
+                                    </div>
+                                    <div class="img"> 
+                                        <p>AMUSE index.3</p>
+                                        <img src="images/amuse-3.svg" alt="Image 1">
+                                    </div>
+                                    <div class="img">
+                                        <p>AMUSE index.4</p>
+                                        <img src="images/amuse-4.svg" alt="Image 1">
+                                    </div>
                                 </div>
-                                <button class="modal-button" id="modalNextButton">▶</button>
+                                <button class="modal-button" id="modalNextButton"><img src="images/right.svg" alt=""></button>
                                 
                             </div>
                             
@@ -380,35 +396,61 @@
                         <div id="modalContent">
                             <h2>KAKAO BNAK Web site Resign</h2>
                             <p>KAKAO BNAKindex.1</p>
-                            <button id="modalCloseButton2"><p>닫기</p></button>
-                            <div class="modal-slider-wrap"></div>
-                                
-                                <button class="modal-button" id="modalPrevButton">◀</button>
-                                <div class="image-slider">
-                                    <img src="images/amuse-1.svg" alt="Image 1">
-                                    <img src="images/amuse-2.svg" alt="Image 2">
-                                    <img src="images/amuse-3.svg" alt="Image 3">
-                                    <img src="images/amuse-4.svg" alt="Image 4">
-                                </div>
-                                <button class="modal-button" id="modalNextButton">▶</button>
-                                
+                            
+                            <button id="modalCloseButton2" class="modalCloseButton1"><p>X</p></button>
+                            <div class="modal-slider-wrap">
+                                <button class="modal-button" id="modalPrevButton2"><img src="images/left.svg" alt=""></button>
+                                    <div class="image-slider">
+                                        <div class="img">
+                                            <p>KAKAO BNAK index.1</p>
+                                            <img src="images/amuse-1.svg" alt="Image 1">
+                                        </div>
+                                        <div class="img">
+                                            <p>KAKAO BNAK index.2</p>
+                                            <img src="images/amuse-2.svg" alt="Image 1">
+                                        </div>
+                                        <div class="img"> 
+                                            <p>KAKAO BNAK index.3</p>
+                                            <img src="images/amuse-3.svg" alt="Image 1">
+                                        </div>
+                                        <div class="img">
+                                            <p>KAKAO BNAK index.4</p>
+                                            <img src="images/amuse-4.svg" alt="Image 1">
+                                        </div>
+                                    </div>
+                                <button class="modal-button" id="modalNextButton2"><img src="images/right.svg" alt=""></button>
                             </div>
+                        </div>
                     </div>
+
                     <div id="modalContainer3" class="hidden">
                             <div id="modalContent">
                                 <h2>KAKAO BNAK Web site Resign</h2>
                                 <p>KAKAO BNAKindex.1</p>
-                                <button id="modalCloseButton3"><p>닫기</p></button>
-                                <div class="modal-slider-wrap"></div>
+                                <button id="modalCloseButton3" class="modalCloseButton1"><p>X</p></button>
+                                <div class="modal-slider-wrap">
+                                    <button class="modal-button" id="modalPrevButton3"><img src="images/left.svg" alt=""></button>
+                                        <div class="image-slider">
+                                            <div class="img">
+                                                <p>KAKAO BNAK index.1</p>
+                                                <img src="images/amuse-1.svg" alt="Image 1">
+                                            </div>
+                                            <div class="img">
+                                                <p>KAKAO BNAK index.2</p>
+                                                <img src="images/amuse-2.svg" alt="Image 1">
+                                            </div>
+                                            <div class="img"> 
+                                                <p>KAKAO BNAK index.3</p>
+                                                <img src="images/amuse-3.svg" alt="Image 1">
+                                            </div>
+                                            <div class="img">
+                                                <p>KAKAO BNAK index.4</p>
+                                                <img src="images/amuse-4.svg" alt="Image 1">
+                                            </div>
+                                        </div>
+                                    <button class="modal-button" id="modalNextButton3"><img src="images/right.svg" alt=""></button>
+                                </div>
                                     
-                                    <button class="modal-button" id="modalPrevButton">◀</button>
-                                    <div class="image-slider">
-                                        <img src="images/amuse-1.svg" alt="Image 1">
-                                        <img src="images/amuse-2.svg" alt="Image 2">
-                                        <img src="images/amuse-3.svg" alt="Image 3">
-                                        <img src="images/amuse-4.svg" alt="Image 4">
-                                    </div>
-                                    <button class="modal-button" id="modalNextButton">▶</button>
                                     
                             </div>
                     </div>
@@ -419,9 +461,6 @@
                     
             </div>
 
-
-        </div>
-    </div>
 
 
             <div id="works">
@@ -602,6 +641,12 @@
 
 
 
+        </div>
+
+
+            
+        
+
             <div id="footer">
                 <p>이홈페이지는어고</p>
             </div>
@@ -625,6 +670,10 @@
             window.scrollTo({ top: 0, behavior: "smooth" });  
         }
     </script>
+
+
+<!-- 텍스트 스크립트 -->
+    <script src="./js/moving-text.js"></script>
 
     <!-- 키워드 무한 스크롤 스크립트 -->
     <script>
@@ -680,6 +729,7 @@
                 }
                 
                 const offset = currentIndex * -100;
+                sliderWrapper.style.transition = 'transform 0.5s ease-in-out';
                 sliderWrapper.style.transform = `translateX(${offset}%)`;
                 
                 // back 요소들의 배경색 변경
@@ -835,6 +885,9 @@
 
 
     </script>
+
+
+
     <!-- 모달창 -->
     
     <script src="./js/modal.js"></script>

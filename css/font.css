@@ -152,3 +152,11 @@ font-style: normal;
 
 /* 메인 */
 #main span{font-weight: 600;}
+
+body {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+
+}
