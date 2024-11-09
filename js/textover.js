@@ -1,15 +1,23 @@
-const canvas = document.getElementById('.moving-text');
+const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
-canvas.height = window.innerHeight;
+
+// canvas의 크기를 설정
+canvas.height = 920;
 canvas.width = window.innerWidth;
+
+// canvas의 위치를 우측 하단으로 이동
+canvas.style.position = 'absolute';
+canvas.style.bottom = '0';
+canvas.style.right = '0';
+
 let particleArray = [];
-let adjustX = 5;
-let adjustY = 10;
+let adjustX = 90;
+let adjustY = 85;
 const particleAttributes = {
-	size : 1,
-	color: 'black',
-	kerning: 5,
-	returnLag: 20,
+	size : 2,
+	color: '#7300006f',
+	kerning: 4.2,
+	returnLag: 10,
 }
 
 const mouse = {
@@ -18,9 +26,11 @@ const mouse = {
 	radius: 100
 }
 
-ctx.font = '30px Veranda';
-ctx.fillText('Tomato', 0, 40 );
-const textCoordinates = ctx.getImageData(0, 0, 150, 50)
+/* 폰트 스타일 변경 */
+ctx.font = 'italic 87px  SF_HambakSnow';
+ctx.fillText('Tomato', 30, 62 );
+ctx.fillText('Puree', 90, 130 );
+const textCoordinates = ctx.getImageData(15, 0, 350, 4000)
 
 
 window.addEventListener('mousemove',
@@ -37,6 +47,13 @@ window.addEventListener("touchmove",
     }
 )
 
+window.addEventListener('resize', () => {
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    canvas.style.bottom = '0';
+    canvas.style.right = '0';
+});
+
 class Particle {
 	constructor(x,y) {
 		this.x = x;
@@ -45,6 +62,8 @@ class Particle {
 		this.baseX = this.x;
 		this.baseY = this.y;
 		this.density = (Math.random() * 30) + 1;
+		this.initialSize = this.size;
+		this.size = 0;
 	}
 	draw() {
 		ctx.fillStyle = particleAttributes.color
@@ -67,7 +86,6 @@ class Particle {
 		if (distance < mouse.radius) {
 			this.x -= directionX; 
 			this.y -= directionY;
-			
 		} else {
 			if (this.x != this.baseX) {
 				let dx = this.x - this.baseX;
@@ -77,6 +95,10 @@ class Particle {
 				let dy = this.y - this.baseY;
 				this.y -= dy / particleAttributes.returnLag
 			}
+		}
+
+		if (this.size < this.initialSize) {
+			this.size += 0.1;
 		}
 	}
 }
@@ -106,4 +128,4 @@ function animate() {
 	requestAnimationFrame(animate); 
 }
 
-animate(); 
+animate();
