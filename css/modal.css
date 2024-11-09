@@ -24,6 +24,7 @@
     background: rgba(0, 0, 0, 0.5);
     z-index: 2;
     
+    
   }
   
 #modalContent {
@@ -78,8 +79,8 @@
     margin-top: 5%;
     z-index: 2;
     animation: fadeIn 400ms;
-
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-align: center;
 
 }
 
@@ -107,6 +108,8 @@
 #modalContent .modal-slider-wrap {
     display: flex;
     align-items: center;
+    justify-content: center;
+
 }
 
 #modalContent .image-slider {
@@ -116,11 +119,13 @@
     overflow: auto; /* 스크롤 가능 */
     width: 300px; /* 슬라이더의 너비를 설정 */
     height: 500px; /* 슬라이더의 높이를 설정 */
+    align-items: center;
+    text-align: center;
+    
 }
 
 #modalContent .modal-button {
     background-color: transparent;
-    border: 2px solid red;
     font-size: 24px;
     cursor: pointer;
     z-index: 10; /* 버튼이 다른 요소 위에 표시되도록 설정 */

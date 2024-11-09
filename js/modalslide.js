@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const modal1 = document.getElementById('modalContainer1');
     const modal2 = document.getElementById('modalContainer2');
+    const modal3 = document.getElementById('modalContainer3');
 
-    if (!modal1 || !modal2) return;
+    if (!modal1 || !modal2 || !modal3) return;
 
     const imageSlider1 = modal1.querySelector('.image-slider');
     const prevButton1 = modal1.querySelector('#modalPrevButton');
@@ -12,8 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevButton2 = modal2.querySelector('#modalPrevButton2');
     const nextButton2 = modal2.querySelector('#modalNextButton2');
 
+    const imageSlider3 = modal3.querySelector('.image-slider');
+    const prevButton3 = modal3.querySelector('#modalPrevButton');
+    const nextButton3 = modal3.querySelector('#modalNextButton');
+
     let currentIndex1 = 0;
     let currentIndex2 = 0;
+    let currentIndex3 = 0;
 
     const showImage = (slider, index) => {
         if (!slider) return index;
@@ -41,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
         currentIndex2 = showImage(imageSlider2, index);
     };
 
+    const moveToSlide3 = (index) => {
+        currentIndex3 = showImage(imageSlider3, index);
+    };
+
     if (prevButton1 && nextButton1) {
         prevButton1.addEventListener('click', () => {
             moveToSlide1(currentIndex1 - 1);
@@ -61,7 +71,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    if (prevButton3 && nextButton3) {
+        prevButton3.addEventListener('click', () => {
+            moveToSlide3(currentIndex3 - 1);
+        });
+
+        nextButton3.addEventListener('click', () => {
+            moveToSlide3(currentIndex3 + 1);
+        });
+    }
+
     // 초기 이미지 표시
     moveToSlide1(0);
     moveToSlide2(0);
+    moveToSlide3(0);
 });

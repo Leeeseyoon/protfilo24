@@ -42,9 +42,7 @@
         will-change: transform; /* 성능 최적화를 위한 속성 */
     }
     
-    #modalOpenButton1:hover {
-        transform: scale(1.02); /* 호버 시 크기 증가 */
-    }
+    #modalOpenButton1:hover {}
     .d_txtbox{
         align-self: center;
         flex: 1;
