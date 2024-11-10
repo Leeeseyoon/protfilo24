@@ -45,10 +45,16 @@
 
             <div id="main">
                 <div class="txt_box">
-                    <p class="subtitle2"><span>감칠맛</span> 나고 <span>톡톡</span> 튀는 개성있는 디자이너</p>
+                    <p class="subtitle2">
+                        <span class="clickable" onclick="createParticles(event)" style="position: relative;">감칠맛
+                            <span class="dot" style=" left: 15%;"></span><span class="dot" style=" left: 50%;"></span><span class="dot" style=" left: 82%;"></span>
+                        </span> 나고 
+                        <span class="clickable" onclick="createParticles(event)" style="position: relative;">톡톡
+                            <span class="dot" style=" left: 25%;"></span><span class="dot" style=" left: 70%;"></span>
+                        </span> 튀는 개성있는 디자이너
+                    </p>
                     <h1 class="titlename">#SEYOON</h1>
-                    <p class="subtitle">Web Design Protflio <br>
-                        2022-2024</p>
+                    <p class="subtitle">Web Design Protflio <br> 2022-2024</p>
                 </div>
                 <div class="imgbox">
                     <div class="tomatoes">
@@ -171,7 +177,8 @@
                     </div>
                     <div class="imgbox">
                         <div class="spoon"><img src="images/spoon.svg" alt=""></div>
-                        <div class="toamto"><img src="images/Tomato.png" alt=""></div>
+                        <div class="toamto"><img src="images/Tomato-5.png" width="300px" height="300px" alt=""></div>
+                        <!-- <div class="toamto"><img src="images/Tomato-6.png" width="300px" height="300px" alt=""></div> -->
                     </div>
                 </div>
                 <div class="about_box">
@@ -618,23 +625,25 @@
 
             <div id="contact">
                 <h1 class="titlename">#CONTACT</h1>
-                <div class="formbox">
-                    <form class="contactbox" action="js/send_email.php" method="POST">
-                        <div class="namebox">
-                            <input type="text" name="name" placeholder="Text your name" required>
-                        </div>
-                        <div class="emailbox">
-                            <input type="email" name="email" placeholder="Wirte yout E-mail" required>
-                        </div>
-                        <div class="requestbox">
-                            <textarea name="message" placeholder="Please write your request" required></textarea>
-                        </div>
-                        <button type="submit">Send</button>
-                    </form>
+                <div class="conbox">
+                    <div class="formbox">
+                        <form class="contactbox" action="js/send_email.php" method="POST">
+                            <div class="namebox">
+                                <input type="text" name="name" placeholder="Text your name" required>
+                            </div>
+                            <div class="emailbox">
+                                <input type="email" name="email" placeholder="Wirte yout E-mail" required>
+                            </div>
+                            <div class="requestbox">
+                                <textarea name="message" placeholder="Please write your request" required></textarea>
+                            </div>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
                     <div class="SNSbox">
-                        <div class="instar"></div>
-                        <div class="blog"></div>
-                        <div class="behance"></div>
+                        <div class="instar"><img src="images/instar.png" alt=""></div>
+                        <div class="blog"><img src="images/blog.png" alt=""></div>
+                        <div class="behance"><img src="images/behance.png" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -656,7 +665,7 @@
         
 
             <div class="button-container">
-                <div class="moveTopBtn"><h1>&uarr;</h1></div>
+                <div class="moveTopBtn"><h1><img src="images/left.svg" style="transform: rotate(90deg)"  alt=""></h1></div>
             </div>
         </div>
     </div>
@@ -672,8 +681,6 @@
         }
     </script>
 
-
-<!-- 텍스트 스크립트 -->
 
     <!-- 키워드 무한 스크롤 스크립트 -->
     <script>
@@ -757,7 +764,44 @@
         });
     </script>
 
-    
+    <!-- 톡톡 파티클 스크립트 -->
+    <script>
+        function createParticles(event) {
+            const x = event.clientX;
+            const y = event.clientY;
+        
+            for (let i = 0; i < 10; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                const initialSize = Math.random() * 20 + 10; // 10px ~ 30px 크기
+                particle.style.width = `${initialSize}px`;
+                particle.style.height = `${initialSize}px`;
+                particle.style.backgroundColor = 'rgba(200, 0, 0, 0.8)'; // 흰색 반투명
+                particle.style.left = `${x}px`;
+                particle.style.top = `${y}px`;
+                document.body.appendChild(particle);
+        
+                const angle = Math.random() * Math.PI * 2;
+                const distance = Math.random() * 50 + 20; // 20px ~ 70px 거리
+                const dx = Math.cos(angle) * distance;
+                const dy = Math.sin(angle) * distance;
+        
+                // 애니메이션 설정
+                particle.animate([
+                    { transform: `translate(0, 0) scale(1)`, opacity: 1 },
+                    { transform: `translate(${dx}px, ${dy}px) scale(0)`, opacity: 0 }
+                ], {
+                    duration: 1000,
+                    easing: 'ease-out',
+                    fill: 'forwards'
+                });
+        
+                setTimeout(() => {
+                    particle.remove();
+                }, 1000);
+            }
+        }
+        </script>
     <!-- 버튼파티클 스크립트 -->
     <script>
     document.querySelectorAll('.confetti-button').forEach(button => {

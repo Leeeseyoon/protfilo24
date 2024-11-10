@@ -158,7 +158,7 @@ a {
 
     .keybox {
         
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 약간의 그림자 효과 */
+        /* 약간의 그림자 효과 */
         white-space: nowrap; /* 텍스트 줄바꿈 방지 */
     }
 
@@ -170,6 +170,7 @@ a {
         margin: 0;
         font-size: 24px;
         color: #333;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     .keyword-track-left {
@@ -219,6 +220,11 @@ a {
     /* margin-top: 2%; */
 }
 
+
+
+
+
+
 .tomatoes img {
     transition: transform 0.5s ease; /* 부드러운 변환 효과 */
 }
@@ -247,5 +253,58 @@ a {
     }
 }
 
+.particle {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 20; /* 텍스트 위에 표시되도록 설정 */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* 부드러운 변환 효과 추가 */
+}
+
+/* 텍스트 애니메이션 효과 */
+@keyframes textAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.subtitle2 {
+    position: absolute;
+    font-size: 30px; 
+    font-family: 'Pretendard-Regular';
+    color: #670003;
+
+}
+
+.subtitle2 .clickable{
+    animation: textAnimation 2s ease-in-out infinite;
+}
+/* 호버 효과 */
+.subtitle2 span {
+    display: inline-block; /* 호버 효과를 위해 inline-block으로 설정 */
+    transition: transform 0.3s ease; /* 부드러운 변환 효과 */
+}
 
 
+.dot {
+    background-color: #670003;
+    position: absolute;
+    width: 5px; /* 점의 크기 */
+    height: 5px; 
+    border-radius: 50%; /* 원형으로 만들기 */
+    margin-bottom: 30px;
+    top: -5px;
+    animation: pulse 1s infinite; /* 점이 부풀어 오르는 애니메이션 */
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

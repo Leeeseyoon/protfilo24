@@ -71,16 +71,17 @@
 /* Top */
 /* 하단 버튼 */
 .moveTopBtn { 
+    margin-right: 2%;
     position: fixed;
-    bottom: 1rem;
+    bottom: 1.3rem;
         right: 1rem;
         width: 4rem;
         height: 4rem;
         background-color: rgb(60, 46, 28);
         border-radius: 50%;
-        color: #fff;
+
 }
-.moveTopBtn h1{font-size: 2.3rem; margin-top: 3%; margin-left: 20%;}
+.moveTopBtn h1{font-size: 2.3rem; margin-top: 4%; margin-left: 32%;}
 .button-container {position: relative;z-index: 1;}
 
 .button-container button {
@@ -89,6 +90,6 @@ font-size: 16px;
 }
 .moveTopBtn:hover{
     transition: 0.5s ease;
-    background-color: #ffb623;
+    background-color: #790400;
     scale: 1.2;
 }

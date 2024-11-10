@@ -44,13 +44,13 @@
     
     /* 호버 시 애니메이션 추가 */
     #modalOpenButton1:hover {
-        animation: float 1s ease-in-out infinite; /* 애니메이션 적용 */
+        animation: float 0.8s ease-in-out infinite; /* 애니메이션 적용 */
     }
     #modalOpenButton2:hover {
-        animation: float 1s ease-in-out infinite; /* 애니메이션 적용 */
+        animation: float 0.8s ease-in-out infinite; /* 애니메이션 적용 */
     }
     #modalOpenButton3:hover {
-        animation: float 1s ease-in-out infinite; /* 애니메이션 적용 */
+        animation: float 0.8s ease-in-out infinite; /* 애니메이션 적용 */
     }
 
     /* 애니메이션 정의 */
