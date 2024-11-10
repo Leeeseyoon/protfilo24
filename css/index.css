@@ -219,5 +219,33 @@ a {
     /* margin-top: 2%; */
 }
 
+.tomatoes img {
+    transition: transform 0.5s ease; /* 부드러운 변환 효과 */
+}
+
+/* 호버 시 애니메이션 추가 */
+.tomatoes img:hover {
+    animation: shake 1s ease infinite; /* 애니메이션을 무한 반복으로 설정 */
+}
+
+/* 애니메이션 정의 */
+@keyframes shake {
+    0% {
+        transform: rotate(0deg) translate(0, 0); /* 원래 위치 */
+    }
+    25% {
+        transform: rotate(-5deg) translate(0, 0px); /* 왼쪽 상단 모서리 내려감 */
+    }
+    50% {
+        transform: rotate(5deg) translate(10px, 0); /* 오른쪽 상단 모서리 회전 및 이동 */
+    }
+    75% {
+        transform: rotate(-3deg) translate(0, 0px); /* 다시 원래 위치로 돌아옴 */
+    }
+    100% {
+        transform: rotate(0deg) translate(0, 0); /* 원래 위치 */
+    }
+}
+
 
 

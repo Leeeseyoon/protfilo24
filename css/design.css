@@ -38,11 +38,31 @@
 
     
     #modalOpenButton1 {
-        transition: transform 2s ease; /* 부드러운 변환 효과 */
+        transition: transform 0.2s ease; /* 부드러운 변환 효과 */
         will-change: transform; /* 성능 최적화를 위한 속성 */
     }
     
-    #modalOpenButton1:hover {}
+    /* 호버 시 애니메이션 추가 */
+    #modalOpenButton1:hover {
+        animation: float 1s ease-in-out infinite; /* 애니메이션 적용 */
+    }
+    #modalOpenButton2:hover {
+        animation: float 1s ease-in-out infinite; /* 애니메이션 적용 */
+    }
+    #modalOpenButton3:hover {
+        animation: float 1s ease-in-out infinite; /* 애니메이션 적용 */
+    }
+
+    /* 애니메이션 정의 */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0); /* 원래 위치 */
+        }
+        50% {
+            transform: translateY(-10px); /* 위로 10px 이동 */
+        }
+    }
+
     .d_txtbox{
         align-self: center;
         flex: 1;

@@ -8,6 +8,7 @@
     
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Fugaz+One&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/font.css">
@@ -847,44 +848,6 @@
 
 
     <!--  -->
-    <script>
-        const button = document.getElementById('modalOpenButton1');
-
-        // 설정할 이동 범위 및 속도
-        const moveDistance = 10; // 위 아래로 이동할 거리 (픽셀)
-        const moveSpeed = 50; // 이동 속도 (ms)
-        let direction = 1; // 이동 방향: 1은 아래, -1은 위
-
-        const moveButton = () => {
-            // 현재 위치를 가져온 후 Y축으로 이동
-            const currentTransform = getComputedStyle(button).transform;
-            const translateY = currentTransform === 'none' ? 0 : parseFloat(currentTransform.split(',')[5]);
-            
-            // Y축 위치 업데이트
-            button.style.transform = `translateY(${translateY + (moveDistance * direction)}px) scale(1.02)`;
-            
-            // 방향 전환: 위로 이동 중이면 아래로, 아래로 이동 중이면 위로
-            if (translateY >= moveDistance || translateY <= -moveDistance) {
-                direction *= -1; // 방향 전환
-            }
-
-            // 다음 위치로 이동
-            setTimeout(moveButton, moveSpeed); // 속도에 따라 반복 호출
-        };
-
-        // 버튼 호버 이벤트
-        button.addEventListener('mouseover', () => {
-            button.style.transform = `scale(1.02)`; // 호버 시 크기 증가
-        });
-
-        // 애니메이션 시작
-        moveButton();
-
-
-
-
-    </script>
-
 
 
     <!-- 모달창 -->
