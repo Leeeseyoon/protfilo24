@@ -160,3 +160,27 @@ body {
   user-select:none
 
 }
+@media (max-width: 768px){
+    #main .titlename{
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 10%;
+    }
+    #about .titlename{
+      font-size: 3rem;
+      
+    }
+    #works .titlename{
+      font-size: 3rem;
+      text-align: center;
+    }
+    #contact .titlename{
+      font-size: 3rem;  
+      text-align: center;
+    }
+    #design .titlename{
+      font-size: 3rem;
+      text-align: center;
+    }
+  
+}

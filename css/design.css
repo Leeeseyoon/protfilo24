@@ -27,6 +27,7 @@
     justify-content: space-between;
     gap: 18%;
     transition: background-color 0.5s ease-in-out;
+    z-index: 1;
 }
     .back img{
         margin-left: 34%;
@@ -67,6 +68,8 @@
         align-self: center;
         flex: 1;
         margin-top: -5%;
+        position: relative;
+        z-index: 2;
     }
 
     /* 텍스트박스요소 가로정렬 */
@@ -203,6 +206,7 @@
     .back {
         flex-direction: column; /* 세로 방향으로 정렬 */
         align-items: center; /* 중앙 정렬 */
+        height: 100vh;
     }
 
     .d_txtbox {
@@ -211,6 +215,17 @@
 
     .d_txtbox .text {
         flex-direction: column; /* 세로 방향으로 정렬 */
+        
+    }
+    .d_txtbox .title h2{
+        font-size: 1.5rem;
+    }
+
+
+    .mockup img {
+        flex-direction: column;
+        width: 100%; /* 부모 요소에 맞게 너비를 100%로 설정 */
+        height: auto; /* 비율에 맞게 높이 자동 조정 */
     }
 }
 

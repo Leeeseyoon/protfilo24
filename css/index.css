@@ -97,7 +97,9 @@ a {
     -webkit-background-clip: text;
 }
 
-
+#main .imgbox h1{
+    display: none;
+}
 
 
 #content .titlename{
@@ -325,37 +327,57 @@ a {
         margin: 0 5%; /* 여백 조정 */
     }
 
-    #content #about,
-    #content #design {
+    #content #about{
         width: 90%; /* 모바일에서의 너 조정 */
         margin: 0 5%; /* 여백 조정 */
     }
+
+    #content #design{
+        width: 100%; /* 모바일에서의 너 조정 */
+    }
+
 
     #main .subtitle {
         font-size: 1.5rem; /* 모바일에서의 서브타이틀 크기 조정 (24px) */
     }
     #main .subtitle2 {
-        font-size: 0.875rem; /* 모바일에서의 서브타이틀 크기 조정 (14px) */
+
+        margin-top: 1%;
+        font-size: 0.9rem; /* 모바일에서의 서브타이틀 크기 조정 (14px) */
     }
     #main .titlename h1{
         font-size: 3.9375rem; /* 모바일에서의 제목 폰트 크기 조정 (63px) */
     }
-    #main .imgbox{
-        text-align: center;
-        align-items: center;
-        
+    #main .tomatoes{
+        display: flex; /* 플렉스 박스 사용 */
+        justify-content: center; /* 가로 중앙 정렬 */
+        align-items: center; /* 세로 중앙 정렬 (필요시) */
+        margin-top: 30%; /* 위 여백 추가 */
     }
     #main .imgbox img {
-        width: 50%;
-        border: 1px saddlebrown solid;
+        width: 100%; /* 이미지 너비 조정 */
+        max-width: 350px; /* 최대 너비 설정 */
+    }
+    #main .imgbox img:nth-child(1) {
+        margin-right: 30%;
+        margin-top: 24%;
+        width: 60%;
+    }
+    #main .imgbox img:nth-child(2) {
+        left: 0;
+        width: 100%;
+        margin-left: 0%;
     }
 
+    /* about */
     #about .txt_box {
         margin-bottom: 20%; /* 여백 조정 */
+        text-align: center;
+        align-items: center;
     }
 
     .keyword-container {
-        width: 100%; /* 키워드 컨테이너 너비 조정 */
+        width: 27.5%; /* 키워드 컨테이너 너비 조정 */
     }
 
     .keybox p {
@@ -367,7 +389,7 @@ a {
 
     /* 폰트 사이즈 조정 */
     #main .txt_box {
-        font-size: 1.125rem; /* 텍스트 박스 폰트 사이즈 조정 (18px) */
+        font-size: 1rem; /* 텍스트 박스 폰트 사이즈 조정 (18px) */
     }
 
     #about .txt_box h1 {
@@ -376,6 +398,37 @@ a {
 
     #contact .formbox {
         font-size: 1rem; /* 연락처 폼의 폰트 사이즈 조정 (16px) */
+    }
+
+    #main .txt_box {
+        position: absolute; 
+        z-index: 5; 
+        top: 10%; /* subtitle의 위치를 위로 조정 */
+    }
+
+    .subtitle {
+        top: -30px;
+        position: absolute;
+        font-size: 1.5rem; /* 모바일에서의 폰트 크기 조정 */
+        -webkit-background-clip: text;
+         /* margin-top을 0으로 설정하여 간격을 줄임 */
+    }
+
+    .txt_box .subtitle2 {
+        position: absolute;
+        font-size: 0.9rem;
+        color: #670003;
+        top: 100%; /* subtitle2의 위치를 조정하여 subtitle 아래에 위치하도록 설정 */
+    }
+    .txt_box .subtitle2{}
+
+    #canvas1 {
+        display: none; /* 모바일에서 캔버스 숨기기 */
+    }
+    #main .imgbox h1{
+        display: block;
+        font-size: 7rem;
+        left: 0;
     }
 }
 
