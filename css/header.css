@@ -11,10 +11,12 @@
 }
 
 #header .h_logo {
-    width: 100px; height: 60px; background-color: gray;
+
     margin-left: 20%; /* 왼쪽 여백 */
 }
-
+#header .h_logo img{
+    margin-top: 13%;
+}
 #header .h_nav {
     margin-right: 20%; /* 오른쪽 여백 */
 }
@@ -34,11 +36,17 @@
 }
 
 /* 헤더 호버효과 */
-#header .h_logo:hover{
-    background-color: rgb(234, 234, 234);
-    transition: all .3s ease-out;
-    border-radius: 5px;
+
+#header .h_logo:hover img {
+    content: ''; /* 기존 content 속성 제거 */
+    transition: all 3s ease-in; /* 부드러운 전환 효과 */
 }
+
+/* 이미지 변경을 위한 추가 스타일 */
+#header .h_logo img {
+    transition: all 3s ease-in; /* 부드러운 전환 효과 */
+}
+
 #header .h_nav li:hover{
 
     background-color: rgb(234, 234, 234);

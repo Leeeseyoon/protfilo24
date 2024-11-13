@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const movingText = document.querySelector('.moving-text');
+    const toamto = document.querySelector('.toamto'); // .toamto 요소 선택
     let position = -movingText.offsetWidth; // 초기 위치를 화면 밖으로 설정
 
     // CSS 스타일 추가
@@ -81,4 +82,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     moveText(); // 애니메이션 시작
+
+    // imgbox의 두 번째 이미지에 애니메이션 추가
+    const tomatoImage = document.querySelector('.toamto img'); // 두 번째 이미지 선택
+    // 스크롤 이벤트 추가
+    let animationExecuted = false; // 애니메이션 실행 여부를 저장하는 변수
+
+    window.addEventListener('scroll', () => {
+        const aboutSection = document.getElementById('about'); // ID 선택
+        const rect = aboutSection.getBoundingClientRect();
+        
+        console.log('About Section:', rect); // 디버깅 로그 추가
+
+        // #about 섹션이 뷰포트에 들어오면 애니메이션 시작
+        if (rect.top < window.innerHeight && rect.bottom > 0 && !animationExecuted) {
+            animationExecuted = true; // 애니메이션 실행 플래그 설정
+            toamto.style.animation = 'none'; // 애니메이션 초기화
+            toamto.offsetHeight; // 강제로 리플로우 발생
+            toamto.style.animation = 'spinAndDrop 2s forwards'; // 페이드 인과 애니메이션 적용
+        } else if (rect.bottom < 0 || rect.top > window.innerHeight) {
+            // #about 섹션이 뷰포트에서 나갔을 때 애니메이션 페이드 아웃
+            toamto.style.animation = 'forwards'; // 페이드 아웃 애니메이션 적용
+            animationExecuted = false; // 애니메이션 실행 플래그 초기화
+        }
+    });
 });

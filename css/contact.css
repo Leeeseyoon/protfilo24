@@ -25,12 +25,18 @@
 .contactbox {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
+}
+.infobox{
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+
 }
 
 .namebox input,
 .emailbox input {
-    width: 40%;
+    width: 230px;
     padding: 15px 20px;
     font-size: 16px;
     border: 2px solid #c0c0c0;
@@ -70,11 +76,14 @@
     color: white;
     border: none;
     border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: lighter;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: 'Pretendard-Regular';
 }
+
+
 
 .contactbox button:hover {
     background: #FF3434;

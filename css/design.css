@@ -90,6 +90,10 @@
 
 .d_txtbox .title{
     line-height: 1.5;
+    font-family: 'LINESeedKR-Bd';
+}
+.d_txtbox .title p{
+    font-size: 1.5rem;
 }
     
 .d_txtbox .title h2{
@@ -98,6 +102,8 @@
 .d_txtbox .text{
     line-height: 2;
     margin-top: 5%;
+    font-family: 'Pretendard-Regular';
+    font-size: 1.2rem;
 }
 
 .d_txtbox .butbox{

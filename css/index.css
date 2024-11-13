@@ -73,11 +73,11 @@ a {
 #main .imgbox img:nth-child(1){
 
     position: absolute;
-    top: 58%;
+    top: 56%;
     margin-left: 1.5%;
 }
 #main .imgbox img:nth-child(2){
-    margin-top: 10%;
+    margin-top: 20%;
     margin-left: 50%;
 }
 #main .subtitle2{
@@ -101,7 +101,9 @@ a {
     display: none;
 }
 
-
+#canvas1{
+    margin-top: 5%;
+}
 #content .titlename{
     background: linear-gradient(to top, #240001, #b30600);
     color: transparent;
@@ -126,16 +128,32 @@ a {
 .spoon{
     position: absolute;
     left: 0;
-    bottom: -1100px;
-    z-index: -1;
+    bottom: -1150px;
+    z-index: 0;
 }
 .toamto{
     position: absolute;
     z-index: 1;
-    bottom: -1100px;
+    bottom: -1103px;
     left: 25%;
-    transform: scale(0.8);
+    transform: scale(0.5);
+    animation: spinAndDrop 2s forwards;
 }
+
+/* ... 기존 코드 ... */
+
+/* 애니메이션 정의 */
+@keyframes spinAndDrop {
+    0% {
+        transform: translate(-100vw, -100vh) rotate(0deg); /* 시작 위치: 왼쪽 위 */
+    }
+    100% {
+        transform: translate(0, 0) rotate(720deg); /* 최종 위치: 두 바퀴 회전 */
+    }
+}
+
+
+
 #about .titlename{
     margin-bottom: 2%;
 }
@@ -222,7 +240,42 @@ a {
     /* margin-top: 2%; */
 }
 
+#about .about_box h1{
+    font-family: 'SF_HambakSnow';
+    font-size: 40px;
+}
+#about .about_box p{
+    font-family: 'Pretendard-Regular';
+    margin-top: 3%;
+    margin-bottom: 5%;
+    line-height: 1.6;
+}
 
+.toamto img:hover{
+    animation: tomatoRotate 1s ease infinite;
+}
+@keyframes tomatoRotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#about .spoon:hover {
+    animation: spoonMovement 1s ease infinite;
+}
+@keyframes spoonMovement {
+    0% {
+        transform: translateY(0); /* 원래 위치 */
+    }
+    50% {
+        transform: translateY(10px); /* 위로 이동 */
+    }
+    100% {
+        transform: translateY(0); /* 원래 위치로 돌아옴 */
+    }
+}
 
 
 
@@ -310,6 +363,8 @@ a {
         transform: translate(-50%, -50%) scale(1);
     }
 }
+
+
 
 
 /* ... 기존 코드 ... */
@@ -432,4 +487,3 @@ a {
     }
 }
 
-/* ... 기존 코드 ... */
