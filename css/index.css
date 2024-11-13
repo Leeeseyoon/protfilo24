@@ -111,7 +111,9 @@ a {
     margin-top: 3%;
 }
 
-
+.tomatoo{
+    z-index: 2;
+}
 
 
 
@@ -136,7 +138,6 @@ a {
     z-index: 1;
     bottom: -1103px;
     left: 25%;
-    transform: scale(0.5);
     animation: spinAndDrop 2s forwards;
 }
 
