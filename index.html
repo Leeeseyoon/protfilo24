@@ -515,7 +515,7 @@
                         <h3>UX/UI</h3>
                         <div class="boxsize">
                             <div class="work-item">
-                                <img src="images/uxui-work1.jpg"  alt="위홈UX/UI리디자인">
+                                <img src="./images/배달의민족 로고.jpg"  alt="위홈UX/UI리디자인">
                                 <div class="work-info">
                                     <h4>위홈 </h4>
                                     <p>대한민국 1등 공유숙박앱, <br> 위홈 UX/UI 리디자인</p>
@@ -523,7 +523,7 @@
                                 </div>
                             </div>
                             <div class="work-item">
-                                <img src="images/uxui-work2.jpg" alt="배달의 민족">
+                                <img src="./images/배달의민족 로고.jpg" alt="배달의 민족">
                                 <div class="work-info">
                                     <h4>배달의 민족</h4>
                                     <p>대한민국 1등 배달앱, <br>배달의 민족 UX/UI 리디자인</p>
@@ -953,5 +953,18 @@
     <!-- AOS 라이브러리 추가 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+
+    <script>
+        document.querySelectorAll('#header .h_nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault(); // 기본 클릭 동작 방지
+                const targetId = this.getAttribute('href'); // 클릭한 링크의 href 속성 가져오기
+                const targetElement = document.querySelector(targetId); // 해당 ID를 가진 요소 선택
+                
+                // 부드러운 스크롤 애니메이션
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
