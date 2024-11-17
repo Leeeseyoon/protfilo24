@@ -32,11 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // 현재 이미지만 보이도록 설정
         images.forEach((img, i) => {
-            const imageElement = img.querySelector('img');
-            img.style.transition = 'transform 0.5s ease'; // 부드러운 전환 효과 추가
-            img.style.display = (i === index) ? 'block' : 'none'; // 현재 이미지만 보이게 함
-            img.style.maxWidth = '100%'; // 이미지 크기를 슬라이더에 맞춤
-            img.style.transform = (i === index) ? 'translateX(0)' : 'translateX(100%)'; // 슬라이드 효과
+            const imageElement = img.querySelector('.image-slider img');
+            if (imageElement) { // 이미지 요소가 존재하는지 확인
+                img.style.transition = 'transform 0.5s ease '; // 부드러운 전환 효과 추가
+                img.style.display = (i === index) ? 'block' : 'none'; // 현재 이미지만 보이게 함
+                img.style.maxWidth = '100%'; // 이미지 크기를 슬라이더에 맞춤
+                img.style.transform = (i === index) ? 'translateX(0)' : 'translateX(100%)'; // 슬라이드 효과
+            }
         });
         
         return index;

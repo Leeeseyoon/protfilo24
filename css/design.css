@@ -34,6 +34,7 @@
         
     }
     .mockup {
+
         flex: 1; /* 남은 공간을 차지하도록 설정 */
     }
 
@@ -167,7 +168,7 @@
     }
 
     .prev {
-        left: 14%;
+        left: 12%;
     }
     .prev img {
         margin-right: 11%;

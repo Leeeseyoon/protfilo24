@@ -18,6 +18,7 @@ modalOpenButton1.addEventListener('click', () => toggleModal(modal1));
 modalOpenButton2.addEventListener('click', () => toggleModal(modal2));
 modalOpenButton3.addEventListener('click', () => toggleModal(modal3));
 
+
 // 닫기 버튼 클릭 시 모달 닫기
 modalCloseButton1.addEventListener('click', () => toggleModal(modal1));
 modalCloseButton2.addEventListener('click', () => toggleModal(modal2));

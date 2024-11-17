@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- GSAP 라이브러리 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<!-- GSAP ScrollTrigger 플러그인 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Fugaz+One&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/font.css">
@@ -17,9 +21,10 @@
     <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="./css/works.css">
     <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/skill.css">
 
-
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
@@ -181,7 +186,7 @@
                             <!-- 한번 더 복제 -->
                             <div class="keybox"><p>#톡톡튀는</p></div>
                             <div class="keybox"><p>#활기찬</p></div>
-                            <div class="keybox"><p>#토마토 퓨레</p></div>
+                            <div class="keybox"><p>#토��토 퓨레</p></div>
                         </div>
                         <div class="keyword-track-right">
                             <!-- 오른쪽으로 스크롤되는 키워드 -->
@@ -228,19 +233,113 @@
                     </div>
                     <div class="licenses" data-aos-delay="1100" data-aos="fade-left">
                         <h1>Licenses</h1>
-                        <p>컴퓨터 그래픽스 운용 기능사 <br>
+                        <p>컴퓨터 그래픽스 운용 기사 <br>
                             GTQ 1급
                         </p>
                     </div>
-                    <div class="skills"><!-- 스킬에 인터랙션 넣기 -->
-                        <div class="licenses" data-aos-delay="1200" data-aos="fade-left">
-                            <h1>Skills</h1>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                            <div class="circle"></div>
+                    <div class="skills " data-aos-delay="1200" data-aos="fade-left"><!-- 스킬에 인터랙션 넣기 -->
+                        <h1>Skills</h1>
+                        <div class="box">
+                            <div class="ani">
+                                <div class="u_box">
+                                    <div class="percent photoshop">
+                                        <svg>
+                                            <circle cx="40" cy="40" r="40" />
+                                            <circle cx="40" cy="40" r="40" />
+                                        </svg>
+                                        
+                                        <div class="number">
+                                            <img src="./images/photo.png" width="50px" height="50px" alt="">
+                                        </div>
+                                        <h2 class="text">90<span>%</span></h2><!-- 스킬 형식 -->
+                                    </div>
+                                    
+                                    <div class="percent2 illustrator">
+                                        <svg>
+                                            <circle cx="40" cy="40" r="40" />
+                                            <circle cx="40" cy="40" r="40" />
+                                        </svg>
+                                        <div class="number">
+                                            <img src="./images/illust.png" width="50px" height="50px" alt="">
+                                        </div>
+                                        <h2 class="text">95<span>%</span></h2><!-- 스킬 형식 -->
+                                    </div>
+                                    
+                                    <div class="percent3 clip">
+                                        <svg>
+                                            <circle cx="40" cy="40" r="40" />
+                                            <circle cx="40" cy="40" r="40" />
+                                        </svg>
+                                        <div class="number">
+                                            <img src="./images/clip1.png" width="50px" height="50px" alt="">
+                                            
+                                        </div>
+                                        <h2 class="text">95<span>%</span></h2><!-- 스킬 형식 -->
+                                    </div>
+                    
+                                    <div class="percent4 premiere">
+                                        <svg>
+                                            <circle cx="40" cy="40" r="40" />
+                                            <circle cx="40" cy="40" r="40" />
+                                        </svg>
+                                        <div class="number">
+                                            <img src="./images/premiere.png" width="50px" height="50px" alt="">
+                                            
+                                        </div>
+                                        <h2 class="text">60<span>%</span></h2><!-- 스킬 형식 -->
+                                    </div>
+                                </div>
+                                <div class="d_box">
+                                    <div class="percent5 html">
+                                        <svg>
+                                            <circle cx="40" cy="40" r="40" />
+                                            <circle cx="40" cy="40" r="40" />
+                                        </svg>
+                                        <div class="number">
+                                            <img src="./images/html.png" width="50px" height="50px" alt="">
+                                            
+                                        </div>
+                                        <h2 class="text">85<span>%</span></h2><!-- 스킬 형식 -->
+                                    </div>
+                    
+                                    <div class="percent6 css">
+                                        <svg>
+                                            <circle cx="40" cy="40" r="40" />
+                                            <circle cx="40" cy="40" r="40" />
+                                        </svg>
+                                        <div class="number">
+                                            <img src="./images/css.png" width="50px" height="50px" alt="">
+                                            
+                                        </div>
+                                        <h2 class="text">85<span>%</span></h2><!-- 스킬 형식 -->
+                                    </div>
+                    
+                                    <div class="percent7 js">
+                                        <svg>
+                                            <circle cx="40" cy="40" r="40" />
+                                            <circle cx="40" cy="40" r="40" />
+                                        </svg>
+                                        <div class="number">
+                                            <img src="./images/js.png" width="50px" height="50px" alt="">
+                                            
+                                        </div>
+                                        <h2 class="text">60<span>%</span></h2><!-- 스킬 형식 -->
+                                    </div>
+                    
+                                    <div class="percent8 figma">
+                                        <svg>
+                                            <circle cx="40" cy="40" r="40" />
+                                            <circle cx="40" cy="40" r="40" />
+                                        </svg>
+                                        <div class="number">
+                                            <img src="./images/figma.png" width="50px" height="50px" alt="">
+                                            
+                                        </div>
+                                        <h2 class="text">80<span>%</span></h2><!-- 스킬 형식 -->
+                                    </div>
+                                </div>
+                    
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -308,7 +407,7 @@
                                 <div class="back">
 
                                     <div class="mockup">
-                                        <button id="modalOpenButton2"><img src="images/amuse.png" width="833px" height="582px" alt=""></button>
+                                        <button id="modalOpenButton2"><img src="images/kakaobank-웹사이즈.png" width="833px" height="582px" alt=""></button>
                                     </div>
 
                                     <div class="d_txtbox">
@@ -349,7 +448,7 @@
                             <div class="slide red-bg">
                                 <div class="back">
                                     <div class="mockup">
-                                        <button id="modalOpenButton3"><img src="images/amuse.png" width="833px" height="582px" alt=""></button>
+                                        <button id="modalOpenButton3"><img src="images/tomato-웹사이즈2.png" width="833px" height="582px" alt=""></button>
                                     </div>
                                     <div class="d_txtbox">
                                         <div class="title">
@@ -405,19 +504,23 @@
                                 <div class="image-slider">
                                     <div class="img">
                                         <p>AMUSE index.1</p>
-                                        <img src="images/amuse-1.svg" alt="Image 1">
+                                        <img src="images/amuse1.png" alt="Image 1">
                                     </div>
                                     <div class="img">
                                         <p>AMUSE index.2</p>
-                                        <img src="images/amuse-2.svg" alt="Image 1">
+                                        <img src="images/amuse.3.png" alt="Image 1">
                                     </div>
                                     <div class="img"> 
                                         <p>AMUSE index.3</p>
-                                        <img src="images/amuse-3.svg" alt="Image 1">
+                                        <img src="images/amuse2.png" alt="Image 1">
                                     </div>
                                     <div class="img">
                                         <p>AMUSE index.4</p>
                                         <img src="images/amuse-4.svg" alt="Image 1">
+                                    </div>
+                                    <div class="img">
+                                        <p>AMUSE index.5</p>
+                                        <img src="images/amuse-5.svg" alt="Image 1">
                                     </div>
                                 </div>
                                 <button class="modal-button" id="modalNextButton"><img src="images/right.svg" alt=""></button>
@@ -514,8 +617,9 @@
                     <div id="uxui" class="tab-works active" >
                         <h3>UX/UI</h3>
                         <div class="boxsize">
-                            <div class="work-item">
-                                <img src="./images/배달의민족 로고.jpg"  alt="위홈UX/UI리디자인">
+                            <div class="work-item wehome">
+                                <img src="./images/위홈.png"  alt="위홈UX/UI리디자인">
+    
                                 <div class="work-info">
                                     <h4>위홈 </h4>
                                     <p>대한민국 1등 공유숙박앱, <br> 위홈 UX/UI 리디자인</p>
@@ -523,7 +627,7 @@
                                 </div>
                             </div>
                             <div class="work-item">
-                                <img src="./images/배달의민족 로고.jpg" alt="배달의 민족">
+                                <img src="./images/배달의민족 로고.jpg"  alt="배달의 민족" >
                                 <div class="work-info">
                                     <h4>배달의 민족</h4>
                                     <p>대한민국 1등 배달앱, <br>배달의 민족 UX/UI 리디자인</p>
@@ -539,48 +643,57 @@
                         <div class="boxsize" >
                             <div class="r_small">
                                 <div class="work-item size-small" >
-                                    <img src="images/브랜드포스터.png" alt="브랜드 포스터">
+                                    <img src="images/works.jpg" alt="브랜드 포스터">
                                     <div class="work-info">
-                                        <h4>브랜드 포스터</h4>
+                                        <h4>시간</h4>
                                         <!-- <p>신제품 출시 홍보 포스터 디자인</p> -->
-                                        <span class="date">2024.02</span>
+                                        <span class="date">2024.10</span>
                                     </div>
                                 </div>
                             
                                 <div class="work-item size-small">
-                                    <img src="images/graphic-work2.jpg" alt="SNS 배너">
+                                    <img src="images/works_instar/1.jpg" alt="SNS 배너">
                                     <div class="work-info">
-                                        <h4>SNS 배너 디자인</h4>
-                                        <p>아 렉걸린다</p>
-                                        <span class="date">2024.01</span>
+                                        <h4>봉공이와 함께 수원화성 탐방</h4>
+                                        <p>2024 공모전</p>
+                                        <span class="date">2024.11</span>
                                     </div>
                                 </div>
                             </div>
-                        
-                            <div class="work-item size-large">
-                                <img src="images/graphic-work3.jpg" alt="패키지 디자인">
-                                <div class="work-info">
-                                    <h4>dk rpdlagkrhtlvek</h4>
-                                    <p>화장품 브랜드 패키지 디자인</p>
-                                    <span class="date">2023.12</span>
+                            <button id="modalOpenButton4">
+                                <div class="work-item size-large">
+                                    <img src="./images/img1.jpg" width="465px" alt="패키지 디자인">
+                                    <div class="work-info">
+                                        <h4>illustrat</h4>
+                                        <p>취미생활 로그모음</p>
+                                        <span class="date">2021.08/14  ~ 2023</span>
+                                    </div>
                                 </div>
-                            </div>
+                            </button>
+
+
                             <div class="r_small">
-                                <div class="work-item size-small">
-                                    <img src="images/브랜드포스터.png" alt="브랜드 포스터">
-                                    <div class="work-info">
-                                        <h4>브랜드 포스터</h4>
-                                        <p>신제품 출시 홍보 포스터 디자인</p>
-                                        <span class="date">2024.02</span>
+                                
+                                    <div class="work-item size-small" >
+                                    
+                                        <img src="images/켈리..2.jpg" alt="브랜드 포스터">
+                                        <div class="work-info">
+                                            <h4>K스럽게, <br>K켈리스럽게</h4>
+                                            <p>켈리 IMC 제안서 시안
+                                            </p>
+                                            <span class="date">2023.10</span>
+                                        </div>
+                                    
                                     </div>
-                                </div>
+                                
                             
                                 <div class="work-item size-small">
-                                    <img src="images/graphic-work2.jpg" alt="SNS 배너">
+                                    <img src="images/2301110176_이세윤(앨범커버)3차.png" alt="SNS 배너">
                                     <div class="work-info">
-                                        <h4>여기는제목입니다아아아아아랑</h4>
-                                        <p>인스타그램 마케팅용 배너 시리즈</p>
-                                        <span class="date">2024.01</span>
+                                        <h4>앨범 커버 리디자인</h4>
+                                        <p>아이묭 앨범커버 <br>
+                                            君はロックを聴かない 리디자인</p>
+                                        <span class="date">2023.06</span>
                                     </div>
                                 </div>
                             </div>
@@ -592,27 +705,27 @@
                         <h3>Edit</h3>
                         <div class="boxsize">
                             <div class="work-item">
-                                <img src="images/edit-work1.jpg" alt="영상 편집">
+                                <img src="./images/틴트.png" alt="영상 편집">
                                 <div class="work-info">
-                                    <h4>아 뭐넣지</h4>
-                                    <p>30초 브랜드 홍보 모션그래픽</p>
-                                    <span class="date">2024.02</span>
+                                    <h4>오페라 립틴트</h4>
+                                    <p>'오페라 립틴트' 상세페이지 리뉴얼 디자인</p>
+                                    <span class="date">2024.06</span>
                                 </div>
                             </div>
                             <div class="work-item">
-                                <img src="images/edit-work2.jpg" alt="제품 영상">
+                                <img src="./images/edit.png" alt="제품 영상">
                                 <div class="work-info">
-                                    <h4>인스타툰이랑편집이랑</h4>
-                                    <p>신제품 런칭 홍보 영상</p>
-                                    <span class="date">2024.01</span>
+                                    <h4>KUNDAL HONEY&MACADAMIA</h4>
+                                    <p>'KUNDAL HONEY&MACADAMIA' 디자인 응용</p>
+                                    <span class="date">2023.10</span>
                                 </div>
                             </div>
                             <div class="work-item">
-                                <img src="images/edit-work3.jpg" alt="SNS 영상">
+                                <img src="./images/edit3.png" alt="SNS 영상">
                                 <div class="work-info">
-                                    <h4>무언가넣겟죠</h4>
-                                    <p>인스타그램 릴스 시리즈</p>
-                                    <span class="date">2023.12</span>
+                                    <h4>비촌치킨</h4>
+                                    <p>비촌치킨 전단지 리뉴얼 디자인</p>
+                                    <span class="date">2023.09</span>
                                 </div>
                             </div>
                         </div>
@@ -623,14 +736,14 @@
                         <h3>Other</h3>
                         <div class="boxsize">
                             <div class="work-item">
-                                <img src="images/other-work1.jpg" alt="일러스트레이션">
+                                <video src="images/뉴진스.mp4" alt="일러스트레이션"></video>
                                 <div class="work-info">
-                                    <h4>아...저능해</h4>
-                                    <p>브랜드 캐릭터 디자인</p>
-                                    <span class="date">2024.01</span>
+                                    <h4>뉴진스 모션그래픽</h4>
+                                    <p>모션그래픽을 활용한 뉴진스 파워퍼프걸 홍보 영상</p>
+                                    <span class="date">2024.05</span>
                                 </div>
                             </div>
-                            <div class="work-item">
+                            <!-- <div class="work-item">
                                 <img src="images/other-work2.jpg" alt="3D 모델링">
                                 <div class="work-info">
                                     <h4>3D 제품 렌더링</h4>
@@ -645,10 +758,43 @@
                                     <p>스타트업 브랜딩 작업</p>
                                     <span class="date">2023.11</span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
+
+                <div id="modalContainer4" class="hidden">
+                    <div id="modalContent">
+                        <h2>KAKAO BNAK Web site Resign</h2>
+                        <p>KAKAO BNAKindex.1</p>
+                        <button id="modalCloseButton4" class="modalCloseButton1"><p>X</p></button>
+                        <div class="modal-slider-wrap">
+                            <button class="modal-button" id="modalPrevButton4"><img src="images/left.svg" alt=""></button>
+                                <div class="image-slider">
+                                    <div class="img">
+                                        <p>KAKAO BNAK index.1</p>
+                                        <img src="images/amuse-1.svg" alt="Image 1">
+                                    </div>
+                                    <div class="img">
+                                        <p>KAKAO BNAK index.2</p>
+                                        <img src="images/amuse-2.svg" alt="Image 1">
+                                    </div>
+                                    <div class="img"> 
+                                        <p>KAKAO BNAK index.3</p>
+                                        <img src="images/amuse-3.svg" alt="Image 1">
+                                    </div>
+                                    <div class="img">
+                                        <p>KAKAO BNAK index.4</p>
+                                        <img src="images/amuse-4.svg" alt="Image 1">
+                                    </div>
+                                </div>
+                            <button class="modal-button" id="modalNextButton3"><img src="images/right.svg" alt=""></button>
+                        </div>
+                            
+                            
+                    </div>
+                </div>
+                
             </div>
 
             <div id="contact">
@@ -659,23 +805,29 @@
                         <form class="contactbox" action="js/send_email.php" method="POST">
                             <div class="infobox">
                                 <div class="namebox">
-                                    <input type="text" name="name" placeholder="Text your name" required>
+                                    <input type="text" name="name" placeholder="성함" required>
                                 </div>
                                 <div class="emailbox">
-                                    <input type="email" name="email" placeholder="Wirte yout E-mail" required>
+                                    <input type="email" name="email" placeholder="이메일" required>
                                 </div>
                             </div>
                             <div class="requestbox">
-                                <textarea name="message" placeholder="Please write your request" required></textarea>
+                                <textarea name="message" placeholder="문의사항을 적어주세요." required></textarea>
                             </div>
 
                             <button type="submit">Send</button>
                         </form>
                     </div>
                     <div class="SNSbox" data-aos-delay="400" data-aos="fade-up">
-                        <div class="instar" ><img src="images/instar.png" alt=""></div>
-                        <div class="blog"><img src="images/blog.png" alt=""></div>
-                        <div class="behance"><img src="images/behance.png" alt=""></div>
+                        <a target="_blank" href="https://www.instagram.com/_s2lsy/">
+                            <div class="instar" ><img src="images/instar.png" alt=""></div>
+                        </a>
+                        <a target="_blank" href="https://blog.naver.com/lsy200400">
+                            <div class="blog"><img src="images/blog.png" alt=""></div>
+                        </a>
+                        <a target="_blank" href="https://www.behance.net/lsy200400">
+                            <div class="behance"><img src="images/behance.png" alt=""></div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -936,6 +1088,12 @@
         <!-- 모달창안에 슬라이드창 -->
         <script src="./js/modalslide.js"></script>  
 
+    <!-- works 모달창 -->
+    <script src="./js/worksmodal.js"></script>
+
+
+
+
     <!-- 스크롤 애니메이션 -->
     <script src="./js/scroll-animation.js"></script>
 
@@ -955,16 +1113,83 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 
     <script>
-        document.querySelectorAll('#header .h_nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault(); // 기본 클릭 동작 방지
-                const targetId = this.getAttribute('href'); // 클릭한 링크의 href 속성 가져오기
-                const targetElement = document.querySelector(targetId); // 해당 ID를 가진 요소 선택
-                
-                // 부드러운 스크롤 애니메이션
-                targetElement.scrollIntoView({ behavior: 'smooth' });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('#header .h_nav a, #header .h_logo a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault(); // 기본 클릭 동작 방지
+                    const targetId = this.getAttribute('href'); // 클릭한 링크의 href 속성 가져오기
+                    const targetElement = document.querySelector(targetId); // 해당 ID를 가진 요소 선택
+                    
+                    // 부드러운 스크롤 애니메이션
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                });
             });
         });
     </script>
+
+    <script>
+        
+        // GSAP 및 ScrollTrigger 초기화
+        gsap.registerPlugin(ScrollTrigger);
+    
+        // 모든 .percent 요소에 대해 ScrollTrigger 설정
+        const percentElements = document.querySelectorAll('.percent, .percent2, .percent3, .percent4, .percent5, .percent6, .percent7, .percent8');
+    
+        percentElements.forEach((element) => {
+            const svgCircle = element.querySelector('svg circle:nth-child(2)');
+        
+            // 원의 클래스에 따라 적절한 애니메이션 이름을 지정
+            let animationName;
+            if (element.classList.contains('photoshop')) {
+                animationName = 'progress95';
+            } else if (element.classList.contains('illustrator')) {
+                animationName = 'progress87';
+            } else if (element.classList.contains('clip')) {
+                animationName = 'progress87';
+            } else if (element.classList.contains('premiere')) {
+                animationName = 'progress60';
+            } else if (element.classList.contains('html')) {
+                animationName = 'progress85';
+            } else if (element.classList.contains('css')) {
+                animationName = 'progress85';
+            } else if (element.classList.contains('js')) {
+                animationName = 'progress60';
+            } else if (element.classList.contains('figma')) {
+                animationName = 'progress95';
+            }
+        
+            ScrollTrigger.create({
+                trigger: element, // 현재 요소가 트리거
+                start: "top 80%", // 섹션이 뷰포트에 80% 들어오면 시작
+                end: "top 30%", // 섹션이 뷰포트에 30% 남을 때 종료
+                onEnter: () => {
+                    svgCircle.style.animation = 'none'; // 이전 애니메이션 초기화
+                    setTimeout(() => {
+                        svgCircle.style.animation = `${animationName} 1s linear forwards`; // 고유 애니메이션 다시 설정
+                    }, 0);
+                },
+                onLeaveBack: () => {
+                    svgCircle.style.animation = 'none'; // 다시 위로 올라갈 때 애니메이션 초기화
+                }
+            });
+        });
+    
+    </script>
+
+    <!-- 각 스킬 요소에 애니메이션을 적용하는 스크립트 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const percentElements = document.querySelectorAll('.percent, .percent2, .percent3, .percent4, .percent5, .percent6, .percent7, .percent8');
+
+            percentElements.forEach((element) => {
+                const svgCircle = element.querySelector('svg circle:nth-child(2)');
+                const animationName = svgCircle.getAttribute('class'); // 각 스킬에 맞는 클래스 이름을 가져옴
+
+                // 애니메이션을 적용
+                svgCircle.style.animation = `${animationName} 1s linear forwards`;
+            });
+        });
+    </script>
+
 </body>
 </html>
