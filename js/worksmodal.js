@@ -38,3 +38,6 @@ window.addEventListener('click', function (event) {
 // 페이지 로드 시 모달이 열리지 않도록 하기 위해 기본적으로 'hidden' 클래스가 적용되어야 합니다.
 // 따라서 HTML에서 'hidden' 클래스를 사용하여 모달을 숨겨둡니다.
 
+
+
+

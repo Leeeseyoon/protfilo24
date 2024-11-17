@@ -101,3 +101,19 @@ font-size: 16px;
     background-color: #790400;
     scale: 1.2;
 }
+
+
+#footer{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    
+    color: rgb(255, 118, 118);
+    font-family: 'Pretendard-Regular';
+    background-color: #4b0300;
+}
+#footer p{
+    padding-top: 2%;
+    font-size: 1.2rem;
+    font-family: 'NanumBarunGothic';
+}

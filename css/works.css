@@ -47,6 +47,7 @@
     flex-direction: column;
     align-items: center; /* 세로 정렬 */
     margin-bottom: 20px; /* 세로 간격 조정 */
+    
 }
 
 #graphic .work-item.size-small img{
@@ -84,19 +85,18 @@
 
 
 .work-item {
-
     position: relative;
-    background: white;
+    mix-blend-mode: multiply;
+    background: linear-gradient(rgba(89, 8, 8, 0.6), rgba(247, 202, 202, 0.5));
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-    
 }
 
 .work-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     
 }
 
@@ -104,6 +104,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    mix-blend-mode: multiply;
 }
 #graphic .work-item img {
     object-fit: cover;
@@ -115,39 +116,37 @@
 }
 
 .work-info  {
-    
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    mix-blend-mode: multiply ;
-    background: linear-gradient(rgba(247, 202, 202, 0.5), rgba(89, 8, 8, 0.6));
+    
     padding: 20px;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-    transition: background 1s ease-in;
+    transition: background 1s ease;
+    color: white;
 }
 
 
-.work-info:hover {
-    background: none;
-}
 
 .work-info h4 {
     font-size: 1.5rem; /* 18px -> 1.125rem */
     margin: 0 0 8px 0;
+    font-family: 'Pretendard-Regular';
+    font-weight: 600;
 }
 
 .work-info p {
     font-size: 1.15rem; /* 14px -> 0.875rem */
-    color: #353535;
+    color: white;
     margin: 0 0 5px 0;
 }
 
 .work-info .date {
     font-size: 1rem; /* 12px -> 0.75rem */
-    color: #3b3b3b;
+    color: white;
 }
 
 
@@ -161,6 +160,7 @@
     flex: 0 0 calc(25% - 10px); /* 3개씩 한 줄에 표시하도록 60%로 변경 */
     margin-bottom: 20px;
     overflow:hidden;
+    
 }
 
 #graphic .work-item img {
@@ -210,7 +210,7 @@
 .tab-button:hover {
     background-color: #000;
     color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
 }
 
@@ -240,6 +240,33 @@
     #graphic .work-item {
         width: 90%; /* 모바일에서의 너비 조정 */
     }
+}
+
+/* Graphic, Edit, Other 탭의 work-item 스타일 수정 */
+#graphic .work-item,
+#edit .work-item,
+#other .work-item {
+    position: relative;
+    mix-blend-mode: multiply;
+    background: linear-gradient( rgba(89, 8, 8, 0.6), rgba(247, 202, 202, 0.5));
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+#graphic .work-item img,
+#edit .work-item img,
+#other .work-item img {
+
+    object-fit: cover;
+    mix-blend-mode: multiply; /* 이미지에 곱하기 블렌드 모드 적용 */
+}
+
+.work-item video {
+    width: 100%; /* 비디오의 너비를 100%로 설정 */
+    height: auto; /* 비디오의 높이를 자동으로 설정 */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
 }
 
 

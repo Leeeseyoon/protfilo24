@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- GSAP 라이브러리 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<!-- GSAP ScrollTrigger 플러그인 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Fugaz+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/font.css">
@@ -23,8 +19,8 @@
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/skill.css">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
@@ -44,6 +40,18 @@
         [data-aos="fade-right"] {
         transform: translateX(-20%); /* 기본 위치에서 20px 아래로 이동 */
         }
+        @media (max-width: 768px) {
+        .mobile-warning {
+            display: block; /* 모바일에서 문구 보이기 */
+            text-align: center;
+            font-size: 18px;
+            color: red; /* 문구 색상 설정 */
+            margin: 20px 0; /* 여백 설정 */
+        }
+        .content {
+            display: none; /* 모바일에서 다른 내용 숨기기 */
+        }
+    }
     </style>
 <body>
    
@@ -186,7 +194,7 @@
                             <!-- 한번 더 복제 -->
                             <div class="keybox"><p>#톡톡튀는</p></div>
                             <div class="keybox"><p>#활기찬</p></div>
-                            <div class="keybox"><p>#토��토 퓨레</p></div>
+                            <div class="keybox"><p>#토마토 퓨레</p></div>
                         </div>
                         <div class="keyword-track-right">
                             <!-- 오른쪽으로 스크롤되는 키워드 -->
@@ -233,11 +241,11 @@
                     </div>
                     <div class="licenses" data-aos-delay="1100" data-aos="fade-left">
                         <h1>Licenses</h1>
-                        <p>컴퓨터 그래픽스 운용 기사 <br>
+                        <p>컴퓨터 그래픽스 운용 기능사 <br>
                             GTQ 1급
                         </p>
                     </div>
-                    <div class="skills " data-aos-delay="1200" data-aos="fade-left"><!-- 스킬에 인터랙션 넣기 -->
+                    <div class="skills  "  data-aos-delay="1100" data-aos="fade-left" ><!-- 스킬에 인터랙션 넣기 -->
                         <h1>Skills</h1>
                         <div class="box">
                             <div class="ani">
@@ -391,7 +399,7 @@
                                             </div>
                                         </div>
                                         <div class="butbox">
-                                            <button>Graphic</button>
+                                            <button> <a target="_blank" href="https://www.figma.com/proto/kOpfwNAO1XcnRCe0q4EkSw/AMUSE-graphic-image?page-id=0%3A1&node-id=1-5&node-type=frame&viewport=666%2C822%2C0.16&t=CMxIhoiG9HBaRMNT-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A5">Graphic</a></button>
                                             <button>Website</button>
                                         </div>
                                     </div>
@@ -436,7 +444,7 @@
                                             </div>
                                         </div>
                                         <div class="butbox">
-                                            <button>Figma</button>
+                                            <button><a target="_blank" href="https://www.figma.com/proto/6qWPztigr3MeopVZ1Lj3z8/KAKAOBANK-figma?page-id=0%3A1&node-id=1-884&node-type=frame&viewport=449%2C1516%2C0.22&t=ZXcvxFKyx9u9VOCi-1&scaling=min-zoom&content-scaling=fixed">Figma</a> </button>
                                             <button>Website</button>
                                         </div>
                                     </div>
@@ -627,7 +635,7 @@
                                 </div>
                             </div>
                             <div class="work-item">
-                                <img src="./images/배달의민족 로고.jpg"  alt="배달의 민족" >
+                                <img src="./images/배달의민족 로고.jpg"  alt="배달의 민족 UX/UI리디자인" >
                                 <div class="work-info">
                                     <h4>배달의 민족</h4>
                                     <p>대한민국 1등 배달앱, <br>배달의 민족 UX/UI 리디자인</p>
@@ -643,7 +651,7 @@
                         <div class="boxsize" >
                             <div class="r_small">
                                 <div class="work-item size-small" >
-                                    <img src="images/works.jpg" alt="브랜드 포스터">
+                                    <img src="images/works.jpg" alt="시간 포스터">
                                     <div class="work-info">
                                         <h4>시간</h4>
                                         <!-- <p>신제품 출시 홍보 포스터 디자인</p> -->
@@ -652,9 +660,9 @@
                                 </div>
                             
                                 <div class="work-item size-small">
-                                    <img src="images/works_instar/1.jpg" alt="SNS 배너">
+                                    <img src="images/works_instar/1.jpg" alt="인스타툰 공모전">
                                     <div class="work-info">
-                                        <h4>봉공이와 함께 수원화성 탐방</h4>
+                                        <h4>봉공이 함께 수원화성 탐방</h4>
                                         <p>2024 공모전</p>
                                         <span class="date">2024.11</span>
                                     </div>
@@ -662,10 +670,10 @@
                             </div>
                             <button id="modalOpenButton4">
                                 <div class="work-item size-large">
-                                    <img src="./images/img1.jpg" width="465px" alt="패키지 디자인">
+                                    <img src="./images/img1.jpg" width="465px" alt="취미생활">
                                     <div class="work-info">
                                         <h4>illustrat</h4>
-                                        <p>취미생활 로그모음</p>
+                                        <p>로그모음</p>
                                         <span class="date">2021.08/14  ~ 2023</span>
                                     </div>
                                 </div>
@@ -676,7 +684,7 @@
                                 
                                     <div class="work-item size-small" >
                                     
-                                        <img src="images/켈리..2.jpg" alt="브랜드 포스터">
+                                        <img src="images/켈리..2.jpg" alt="켈리 제안서 시안">
                                         <div class="work-info">
                                             <h4>K스럽게, <br>K켈리스럽게</h4>
                                             <p>켈리 IMC 제안서 시안
@@ -688,7 +696,7 @@
                                 
                             
                                 <div class="work-item size-small">
-                                    <img src="images/2301110176_이세윤(앨범커버)3차.png" alt="SNS 배너">
+                                    <img src="images/2301110176_이세윤(앨범커버)3차.png" alt="앨범커버 디자인">
                                     <div class="work-info">
                                         <h4>앨범 커버 리디자인</h4>
                                         <p>아이묭 앨범커버 <br>
@@ -705,15 +713,15 @@
                         <h3>Edit</h3>
                         <div class="boxsize">
                             <div class="work-item">
-                                <img src="./images/틴트.png" alt="영상 편집">
+                                <img src="./images/립틴트.png" alt="OPERA LIP TINT">
                                 <div class="work-info">
-                                    <h4>오페라 립틴트</h4>
+                                    <h4>OPERA LIP TINT</h4>
                                     <p>'오페라 립틴트' 상세페이지 리뉴얼 디자인</p>
                                     <span class="date">2024.06</span>
                                 </div>
                             </div>
                             <div class="work-item">
-                                <img src="./images/edit.png" alt="제품 영상">
+                                <img src="./images/edit.png" alt="KUNDAL HONEY&MACADAMIA">
                                 <div class="work-info">
                                     <h4>KUNDAL HONEY&MACADAMIA</h4>
                                     <p>'KUNDAL HONEY&MACADAMIA' 디자인 응용</p>
@@ -721,7 +729,7 @@
                                 </div>
                             </div>
                             <div class="work-item">
-                                <img src="./images/edit3.png" alt="SNS 영상">
+                                <img src="./images/edit3.png" alt="비촌치킨 전단지 리디자인">
                                 <div class="work-info">
                                     <h4>비촌치킨</h4>
                                     <p>비촌치킨 전단지 리뉴얼 디자인</p>
@@ -734,31 +742,16 @@
                     <!-- Other 탭 -->
                     <div id="other" class="tab-works">
                         <h3>Other</h3>
-                        <div class="boxsize">
+                        <div class="boxsize" onclick="toggleVideo(this)">
                             <div class="work-item">
-                                <video src="images/뉴진스.mp4" alt="일러스트레이션"></video>
+                                <video src="./images/뉴진스.mp4" alt="모션그래픽" class="clickable-video" controls></video>
                                 <div class="work-info">
                                     <h4>뉴진스 모션그래픽</h4>
                                     <p>모션그래픽을 활용한 뉴진스 파워퍼프걸 홍보 영상</p>
                                     <span class="date">2024.05</span>
                                 </div>
                             </div>
-                            <!-- <div class="work-item">
-                                <img src="images/other-work2.jpg" alt="3D 모델링">
-                                <div class="work-info">
-                                    <h4>3D 제품 렌더링</h4>
-                                    <p>제 프로모션용 3D 작업</p>
-                                    <span class="date">2023.12</span>
-                                </div>
-                            </div>
-                            <div class="work-item">
-                                <img src="images/other-work3.jpg" alt="브랜딩">
-                                <div class="work-info">
-                                    <h4>브랜드 아이덴티티</h4>
-                                    <p>스타트업 브랜딩 작업</p>
-                                    <span class="date">2023.11</span>
-                                </div>
-                            </div> -->
+
                         </div>
                     </div>
                 </div>
@@ -843,7 +836,7 @@
 
             <div id="footer">
                 <p>Designed by Seyoon <br>
-                    	&copy; 2024 Seyoon portfolio</p>
+                    &copy; 2024 Seyoon portfolio</p>
             </div>
         </div>
 
@@ -1126,69 +1119,20 @@
             });
         });
     </script>
-
     <script>
-        
-        // GSAP 및 ScrollTrigger 초기화
-        gsap.registerPlugin(ScrollTrigger);
-    
-        // 모든 .percent 요소에 대해 ScrollTrigger 설정
-        const percentElements = document.querySelectorAll('.percent, .percent2, .percent3, .percent4, .percent5, .percent6, .percent7, .percent8');
-    
-        percentElements.forEach((element) => {
-            const svgCircle = element.querySelector('svg circle:nth-child(2)');
-        
-            // 원의 클래스에 따라 적절한 애니메이션 이름을 지정
-            let animationName;
-            if (element.classList.contains('photoshop')) {
-                animationName = 'progress95';
-            } else if (element.classList.contains('illustrator')) {
-                animationName = 'progress87';
-            } else if (element.classList.contains('clip')) {
-                animationName = 'progress87';
-            } else if (element.classList.contains('premiere')) {
-                animationName = 'progress60';
-            } else if (element.classList.contains('html')) {
-                animationName = 'progress85';
-            } else if (element.classList.contains('css')) {
-                animationName = 'progress85';
-            } else if (element.classList.contains('js')) {
-                animationName = 'progress60';
-            } else if (element.classList.contains('figma')) {
-                animationName = 'progress95';
-            }
-        
-            ScrollTrigger.create({
-                trigger: element, // 현재 요소가 트리거
-                start: "top 80%", // 섹션이 뷰포트에 80% 들어오면 시작
-                end: "top 30%", // 섹션이 뷰포트에 30% 남을 때 종료
-                onEnter: () => {
-                    svgCircle.style.animation = 'none'; // 이전 애니메이션 초기화
-                    setTimeout(() => {
-                        svgCircle.style.animation = `${animationName} 1s linear forwards`; // 고유 애니메이션 다시 설정
-                    }, 0);
-                },
-                onLeaveBack: () => {
-                    svgCircle.style.animation = 'none'; // 다시 위로 올라갈 때 애니메이션 초기화
-                }
-            });
-        });
-    
-    </script>
+        function toggleVideo(workItem) {
+    const video = workItem.querySelector('.clickable-video');
+    if (video.paused) {
+        video.play(); // 비디오가 일시정지 상태라면 재생
+    } else {
+        video.pause(); // 비디오가 재생 중이라면 일시정지
+    }
+}
 
-    <!-- 각 스킬 요소에 애니메이션을 적용하는 스크립트 -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const percentElements = document.querySelectorAll('.percent, .percent2, .percent3, .percent4, .percent5, .percent6, .percent7, .percent8');
-
-            percentElements.forEach((element) => {
-                const svgCircle = element.querySelector('svg circle:nth-child(2)');
-                const animationName = svgCircle.getAttribute('class'); // 각 스킬에 맞는 클래스 이름을 가져옴
-
-                // 애니메이션을 적용
-                svgCircle.style.animation = `${animationName} 1s linear forwards`;
-            });
-        });
+// DOMContentLoaded 이벤트를 사용하여 스크립트가 로드된 후 실행되도록 설정
+document.addEventListener('DOMContentLoaded', () => {
+    // 추가적인 초기화 코드가 필요하다면 여기에 작성
+});
     </script>
 
 </body>

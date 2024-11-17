@@ -110,6 +110,15 @@
 .d_txtbox .butbox{
     margin-top: 5%;
 }
+.d_txtbox .butbox button:hover{
+    background-color: #b30600;
+    color: #000;
+    transition: 0.2s ease;
+}
+.d_txtbox .butbox a{
+    text-decoration: none;
+    color: white;
+}
 .d_txtbox .butbox button{
     font-size: 26px;
     font-weight: 500;

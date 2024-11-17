@@ -76,31 +76,31 @@
     stroke: #31A8FF;
     animation: progress95 1s linear forwards;
 }
-.box .percent2 svg circle:nth-child(2) {
+.percent2 svg circle:nth-child(2) {
     stroke: #FF9A00;
     animation: progress87 1s linear forwards;
 }
-.box .percent3 svg circle:nth-child(2) {
+.percent3 svg circle:nth-child(2) {
     stroke:#b3b3b3;
     animation: progress87 1s linear forwards;
 }
-.box .percent4 svg circle:nth-child(2) {
+.percent4 svg circle:nth-child(2) {
     stroke: #9a99ff;
     animation: progress60 1s linear forwards;
 }
-.box .percent5 svg circle:nth-child(2) {
-    stroke: #e54d26;
+.percent5 svg circle:nth-child(2) {
+    stroke: #97270b;
     animation: progress85 1s linear forwards;
 }
-.box .percent6 svg circle:nth-child(2) {
+.percent6 svg circle:nth-child(2) {
     stroke: #379ad6;
     animation: progress85 1s linear forwards;
 }
-.box .percent7 svg circle:nth-child(2) {
+.percent7 svg circle:nth-child(2) {
     stroke: #f2bf22;
     animation: progress60 1s linear forwards;
 }
-.box .percent8 svg circle:nth-child(2) {
+.percent8 svg circle:nth-child(2) {
     stroke: #5a5a5a;
     animation: progress95 1s linear forwards;
 }
@@ -160,9 +160,13 @@
     float: left;
     
 }
-.text{
+.skills .text{
     text-align: center;
     margin-left: 5%;
+    font-size: 1rem;
+}
+.skills .d_box{
+    margin-top: 3%;
 }
 
 
