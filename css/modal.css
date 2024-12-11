@@ -173,13 +173,15 @@
     
 }
 
-#modalPrevButton {
+#modalPrevButton, #modalPrevButton2, #modalPrevButton3 {
     left: 280px; /* 추가: 이전 버튼 위치 */
 }
 
-#modalNextButton {
+#modalNextButton, #modalNextButton2, #modalNextButton3{
     right: 280px; /* 추가: 다음 버튼 위치 */
 }
+
+
 
 #modalContent .img {
     display: flex;
