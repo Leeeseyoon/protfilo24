@@ -10,7 +10,19 @@ const modal3 = document.getElementById('modalContainer3');
 
 // 모달을 숨기는 함수
 const toggleModal = (modal) => {
-    modal.classList.toggle('hidden');
+    if (modal) {
+        modal.classList.toggle('hidden');
+        // 모달이 열릴 때 현재 인덱스를 0으로 리셋
+        if (!modal.classList.contains('hidden')) {
+            const slider = modal.querySelector('.image-slider');
+            if (slider) {
+                const images = slider.querySelectorAll('.img');
+                images.forEach((img, i) => {
+                    img.style.display = i === 0 ? 'block' : 'none';
+                });
+            }
+        }
+    }
 };
 
 // 버튼 클릭 시 모달 열기
